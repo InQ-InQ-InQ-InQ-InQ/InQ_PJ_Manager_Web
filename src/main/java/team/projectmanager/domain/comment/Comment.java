@@ -7,7 +7,7 @@ import team.projectmanager.domain.project.Project;
 import javax.persistence.*;
 
 @Entity
-@Getter @Setter
+@Getter
 public class Comment {
 
     @Id
@@ -21,13 +21,12 @@ public class Comment {
     @JoinColumn(name = "project_id")
     private Project project;
 
-    public void setProject(Project project) {
-        this.project = project;
-        project.getComments().add(this);
-    }
-
     public Comment(String script) {
         this.script = script;
+    }
+
+    public void setProject(Project project) {
+        this.project = project;
     }
 
     protected Comment() {

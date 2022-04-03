@@ -32,10 +32,15 @@ public class Project {
     private List<MemberProject> memberProjects =  new ArrayList<>();
 
     //넣을지 뺄지 고민
-    @OneToMany(mappedBy = "project", orphanRemoval = true)
+    @OneToMany(mappedBy = "project", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Comment> comments =  new ArrayList<>();
 
     public void removeMP(MemberProject memberProject) {
         getMemberProjects().removeIf(mp -> mp.getId().equals(memberProject.getId()));
+    }
+
+    public void addComment(Comment comment) {
+        comment.setProject(this);
+        getComments().add(comment);
     }
 }

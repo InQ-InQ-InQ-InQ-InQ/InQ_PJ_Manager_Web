@@ -26,8 +26,8 @@ public class skillTest {
         SkillEntity skill = new SkillEntity(Skills.SPRING);
 
         member.getSkills().add(skill);
-        em.flush();
         em.clear();
+        em.flush();
         Member findMember = em.find(Member.class, member.getId());
         findMember.getSkills().removeIf(s -> s.getId().equals(skill.getId()));
         em.flush();
