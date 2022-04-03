@@ -13,7 +13,7 @@ public class SkillEntity {
     private Long id;
 
     @Column(name = "skill_name")
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private Skills name;
 
     public SkillEntity(Skills name) {

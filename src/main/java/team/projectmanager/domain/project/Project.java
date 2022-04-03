@@ -32,7 +32,7 @@ public class Project {
     private List<MemberProject> memberProjects =  new ArrayList<>();
 
     //넣을지 뺄지 고민
-    @OneToMany(mappedBy = "project")
+    @OneToMany(mappedBy = "project", orphanRemoval = true)
     private List<Comment> comments =  new ArrayList<>();
 
     public void removeMP(MemberProject memberProject) {

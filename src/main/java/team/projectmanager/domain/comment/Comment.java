@@ -20,4 +20,16 @@ public class Comment {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "project_id")
     private Project project;
+
+    public void setProject(Project project) {
+        this.project = project;
+        project.getComments().add(this);
+    }
+
+    public Comment(String script) {
+        this.script = script;
+    }
+
+    protected Comment() {
+    }
 }
