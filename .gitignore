@@ -5,10 +5,7 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 ### My ###
-memberrepository
-mprepository
-projectrepository
-commentrepository
+
 
 
 ### STS ###

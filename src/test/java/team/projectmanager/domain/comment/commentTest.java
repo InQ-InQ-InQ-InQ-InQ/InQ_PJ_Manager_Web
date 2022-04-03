@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
-import team.projectmanager.domain.comment.commentrepository.CommentRepository;
 import team.projectmanager.domain.project.Project;
 
 import javax.persistence.EntityManager;
@@ -13,8 +12,6 @@ import javax.persistence.EntityManager;
 @Transactional
 public class commentTest {
 
-    @Autowired
-    CommentRepository commentRepository;
     @Autowired
     EntityManager em;
 
