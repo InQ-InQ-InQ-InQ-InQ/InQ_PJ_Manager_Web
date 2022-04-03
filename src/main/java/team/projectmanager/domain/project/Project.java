@@ -34,4 +34,8 @@ public class Project {
     //넣을지 뺄지 고민
     @OneToMany(mappedBy = "project")
     private List<Comment> comments =  new ArrayList<>();
+
+    public void removeMP(MemberProject memberProject) {
+        getMemberProjects().removeIf(mp -> mp.getId().equals(memberProject.getId()));
+    }
 }

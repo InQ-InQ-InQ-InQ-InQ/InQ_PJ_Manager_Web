@@ -3,7 +3,7 @@ package team.projectmanager.domain.member;
 import lombok.Getter;
 import lombok.Setter;
 import team.projectmanager.domain.memberproject.MemberProject;
-import team.projectmanager.domain.memberskill.MemberSkill;
+import team.projectmanager.domain.skills.SkillEntity;;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -27,9 +27,14 @@ public class Member {
     @Enumerated(EnumType.STRING)
     private Position position;
 
-    @OneToMany(mappedBy = "member")
-    private List<MemberSkill> memberSkills = new ArrayList<>();
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "member_id")
+    private List<SkillEntity> skills = new ArrayList<>();
 
     @OneToMany(mappedBy = "member")
     private List<MemberProject> memberProjects =  new ArrayList<>();
+
+    public void removeMP(MemberProject memberProject) {
+        getMemberProjects().removeIf(mp -> mp.getId().equals(memberProject.getId()));
+    }
 }
