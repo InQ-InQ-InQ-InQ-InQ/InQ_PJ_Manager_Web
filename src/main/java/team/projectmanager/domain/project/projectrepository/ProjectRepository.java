@@ -4,6 +4,7 @@ import team.projectmanager.domain.project.Project;
 import team.projectmanager.domain.project.ProjectStatus;
 import team.projectmanager.domain.project.ProjectUpdateDto;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface ProjectRepository {
@@ -14,7 +15,7 @@ public interface ProjectRepository {
 
     Project findByName(String name);
 
-    Project findAll();
+    List<Project> findAll();
 
     default void update(Project project, ProjectUpdateDto dto){}
 }
