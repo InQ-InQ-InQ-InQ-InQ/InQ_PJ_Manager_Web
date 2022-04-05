@@ -22,12 +22,7 @@ public class DbProjectRepository implements ProjectRepository{
 
     @Override
     public Project findById(Long id) {
-        String query = "select p from Project p where p.id = :projectId";
-        List<Project> resultList = em.createQuery(query, Project.class)
-                .setParameter("projectId", id)
-                .getResultList();
-        if (resultList.isEmpty()) return null;
-        else return resultList.get(0);
+        return em.find(Project.class, id);
     }
 
     @Override
