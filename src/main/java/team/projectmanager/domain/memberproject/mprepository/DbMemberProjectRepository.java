@@ -18,5 +18,15 @@ public class DbMemberProjectRepository implements MemberProjectRepository{
         return memberProject.getId();
     }
 
+    @Override
+    public void remove(MemberProject memberProject) {
+        em.remove(memberProject);
+    }
+
+    @Override
+    public MemberProject findMP(Long id) {
+        return em.find(MemberProject.class, id);
+    }
+
 
 }

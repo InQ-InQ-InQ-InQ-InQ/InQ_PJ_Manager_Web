@@ -8,5 +8,5 @@ public interface MemberProjectRepository {
 
     void remove(MemberProject memberProject);
 
-    MemberProject find(Long id);
+    MemberProject findMP(Long id);
 }
