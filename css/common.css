@@ -1,0 +1,87 @@
+/* COLOR */
+:root {
+  --inq-blue: #0088BD;
+  --inq-yellow: #FFD303;
+  --inq-white: #EFF0F0;
+  --large-font: 30px;
+  --mideum-font: 25px;
+  --small-font: 20px;
+  --btn-font: 28px
+}
+/* COMMON */
+body {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4; /*글자의 행간을 줌 (줄높이)*/
+  font-family: "Nanum Gothic", sans-serif;
+  width: 90%;
+}
+img {
+  display: block;
+  /* 이제 이미지는 더이상 인라인 요소가 아닌 블럭요소가 된다 */
+}
+a {
+  /* 모든 a태그의 밑줄을 없애기 */
+  text-decoration: none;
+}
+.inner {
+  position: relative; /* 자식요소 때문에 position값을 넣는 것이기에 문제가 되지 않기 위해 relative로 함 */
+}
+.btn {
+  width: 130px;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: var(--btn-font);
+  font-weight: 700;
+  text-align: center; /*박스 안에서 글자 가운데 정렬*/
+  cursor: pointer;
+  box-sizing: border-box; /* 패딩, 보더가 들어간 만큼 요소가 커지지 않도록*/
+  display: block; /* a나 span태그에 버튼 클래스를 부여했을 때도 버튼이 정상적으로 나오도록 */
+  transition: .4s; /* hover시 자연스럽게 색상이 바뀌도록 */
+}
+.btn:hover {
+  background-color: var(--inq-yellow);
+}
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--inq-blue);
+  z-index: 9;
+}
+header > .inner {
+  height: 200px;
+}
+header .logo {
+  /* height: 150px; */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 30px;
+  margin: auto;
+}
+header .logo img {
+  height: 200px;
+}
+header .menu {
+  position: relative;
+  height: 200px;
+}
+header .menu .login_name {
+  position: absolute;
+  width: 250px;
+  top: 0;
+  bottom: 30px;
+  right: 50px;
+  margin: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  box-sizing: content-box;
+}
+header .menu .login_name:hover {
+  /* hover시 박스 글자에 넘치는 문제 해결 하지 못함
+  박스 자체의 사이즈를 줄여야 할 것같긴 한데...
+  그러면 노가다... */
+}
