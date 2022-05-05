@@ -12,7 +12,7 @@
 /* COMMON */
 body {
   color: var(--font-black);
-  font-size: 16px;
+  font-size: var(--mideum-font);
   font-weight: 400;
   line-height: 1.4; /*글자의 행간을 줌 (줄높이)*/
   font-family: "Nanum Gothic", sans-serif;
@@ -27,6 +27,8 @@ a {
   text-decoration: none;
 }
 .inner {
+  width: 1100px;
+  margin: 0 auto;
   position: relative; /* 자식요소 때문에 position값을 넣는 것이기에 문제가 되지 않기 위해 relative로 함 */
 }
 .btn {
@@ -53,7 +55,7 @@ header {
   background-color: var(--inq-blue);
   z-index: 9;
 }
-header > .inner {
+header > .header-inner {
   height: 200px;
 }
 header .logo {
