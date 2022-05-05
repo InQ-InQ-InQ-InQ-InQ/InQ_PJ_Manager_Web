@@ -3,6 +3,7 @@
   --inq-blue: #0088BD;
   --inq-yellow: #FFD303;
   --inq-white: #EFF0F0;
+  --font-black: #000000;
   --large-font: 30px;
   --mideum-font: 25px;
   --small-font: 20px;
@@ -10,6 +11,7 @@
 }
 /* COMMON */
 body {
+  color: var(--font-black);
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4; /*글자의 행간을 줌 (줄높이)*/
@@ -28,9 +30,10 @@ a {
   position: relative; /* 자식요소 때문에 position값을 넣는 것이기에 문제가 되지 않기 위해 relative로 함 */
 }
 .btn {
-  width: 130px;
+  width: 250px;
   padding: 10px;
   border-radius: 4px;
+  color: var(--font-black);
   font-size: var(--btn-font);
   font-weight: 700;
   text-align: center; /*박스 안에서 글자 가운데 정렬*/
@@ -64,24 +67,8 @@ header .logo {
 header .logo img {
   height: 200px;
 }
-header .menu {
-  position: relative;
-  height: 200px;
-}
 header .menu .login_name {
   position: absolute;
-  width: 250px;
-  top: 0;
+  right: 30px;
   bottom: 30px;
-  right: 50px;
-  margin: auto;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: flex-end;
-  box-sizing: content-box;
-}
-header .menu .login_name:hover {
-  /* hover시 박스 글자에 넘치는 문제 해결 하지 못함
-  박스 자체의 사이즈를 줄여야 할 것같긴 한데...
-  그러면 노가다... */
 }
