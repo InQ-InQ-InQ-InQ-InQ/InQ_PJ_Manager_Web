@@ -3,7 +3,7 @@
   margin-top: 300px;
 }
 .login .inner {
-  width: 720px;
+  /* width: 720px; */
   /* background-color: aqua; */
   color: var(--inq-blue);
 }

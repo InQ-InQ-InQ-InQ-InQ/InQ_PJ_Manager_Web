@@ -1,0 +1,47 @@
+/* Sign up */
+.signup {
+  margin-top: 300px;
+}
+.signup .inner {
+  color: var(--inq-blue);
+}
+.signup .text-title {
+  margin-bottom: 80px;
+}
+.signup .text-title .title {
+  font-size: var(--large-font);
+  font-weight: 800;
+}
+.signup .text-body {
+  margin: 0 auto;
+  position: relative;
+}
+.signup .text-body .row {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0;
+}
+.signup .text-body .row .sub-title {
+  margin-bottom: 18px ;
+}
+.signup .text-body .row input {
+  width: 720px;
+  height: 82px;
+  padding-left: 30px;
+  border: 2px solid var(--inq-blue);
+  color: var(--inq-blue);
+}
+.signup .btn-row {
+  position: absolute;
+  width: 720px;
+  right: 0;
+	left: 0;
+  margin: auto;
+  margin-top: 50px;
+  padding-left: 180px;
+}
+.signup .btn-row input {
+  width: 390px;
+  height: 82px;
+  margin-bottom: 300px;
+}

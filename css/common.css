@@ -29,7 +29,7 @@ input {
   font-size: 32px;
 }
 .inner {
-  width: 1300px;
+  width: 720px;
   margin: 0 auto;
   position: relative; /* 자식요소 때문에 position값을 넣는 것이기에 문제가 되지 않기 위해 relative로 함 */
 }

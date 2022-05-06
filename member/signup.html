@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InQ Project Manager</title>
+  <!-- favicon 선언 -->
+  <link rel="icon" href="/images/inq_logo.png">
+  <!-- 브라우저 기본 CSS 초기화 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- CSS 파일 연결 -->
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/signup.css">
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+  crossorigin="anonymous"></script>
+  <!-- 공통 header 연결 -->
+  <script type="text/javascript">
+    $(document).ready( function() {
+      $("#headers").load("../common/header_non.html");  // 원하는 파일 경로를 삽입
+    });
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <div id="headers"></div>
+
+  <!-- Sign up -->
+  <section class="signup">
+    <div class="inner">
+
+      <div class="text-title">
+        <span class="title">회원 가입</span>
+      </div>
+      <div class="text-body">
+        <div class="row">
+          <label for="memberName" class="sub-title">이름*</label>
+          <input type="text" id="memberName" name="memberName" required >
+        </div>
+        <div class="row">
+          <label for="signupId" class="sub-title">아이디*</label>
+          <input type="text" id="signupId" name="signupId" required
+                minlength="4" maxlength="15">
+        </div>
+        <div class="row">
+          <label for="signupPw" class="sub-title">비밀번호*</label>
+          <input type="password" id="signupPw" name="signupPw" minlength="8" required>
+        </div>
+        <div class="row">
+          <label for="signupPwCheck" class="sub-title">비밀번호 확인*</label>
+          <input type="password" id="signupPwCheck" name="signupPwCheck" minlength="8" required>
+        </div>
+        <div class="row">
+          <label for="signupEmail" class="sub-title">이메일*</label>
+          <input type="email" id="signupEmail" name="signupEmail" required
+            pattern=".+@globex\.com">
+        </div>
+        <div class="row">
+          <label for="memberPosition" class="sub-title">포지션</label>
+          <input type="text" id="memberPosition" name="memberPosition" required >
+        </div>
+        <div class="row">
+          <label for="memberSkill" class="sub-title">보유기술</label>
+          <input type="text" id="memberSkill" name="memberSkill" required >
+        </div>
+        <div class="row">
+          <label for="memberGithub" class="sub-title">깃허브</label>
+          <input type="text" id="memberGithub" name="memberGithub" required >
+        </div>
+        <div class="row">
+          <label for="memberInfo" class="sub-title">자기소개</label>
+          <input type="text" id="memberInfo" name="memberInfo" required >
+        </div>
+
+        <div class="btn-row">
+          <input class="btn btn--reverse" type="submit" value="가입하기">
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>
