@@ -4,10 +4,10 @@
   --inq-yellow: #FFD303;
   --inq-white: #EFF0F0;
   --font-black: #000000;
-  --large-font: 30px;
-  --mideum-font: 25px;
+  --large-font: 40px;
+  --mideum-font: 32px;
   --small-font: 20px;
-  --btn-font: 28px
+  --btn-font: 30px
 }
 /* COMMON */
 body {
@@ -16,7 +16,6 @@ body {
   font-weight: 400;
   line-height: 1.4; /*글자의 행간을 줌 (줄높이)*/
   font-family: "Nanum Gothic", sans-serif;
-  width: 90%;
 }
 img {
   display: block;
@@ -26,8 +25,11 @@ a {
   /* 모든 a태그의 밑줄을 없애기 */
   text-decoration: none;
 }
+input {
+  font-size: 32px;
+}
 .inner {
-  width: 1100px;
+  width: 1300px;
   margin: 0 auto;
   position: relative; /* 자식요소 때문에 position값을 넣는 것이기에 문제가 되지 않기 위해 relative로 함 */
 }
@@ -37,15 +39,33 @@ a {
   border-radius: 4px;
   color: var(--font-black);
   font-size: var(--btn-font);
-  font-weight: 700;
+  font-weight: 500;
   text-align: center; /*박스 안에서 글자 가운데 정렬*/
   cursor: pointer;
-  box-sizing: border-box; /* 패딩, 보더가 들어간 만큼 요소가 커지지 않도록*/
+  /* box-sizing: border-box; 패딩, 보더가 들어간 만큼 요소가 커지지 않도록 */
   display: block; /* a나 span태그에 버튼 클래스를 부여했을 때도 버튼이 정상적으로 나오도록 */
   transition: .4s; /* hover시 자연스럽게 색상이 바뀌도록 */
 }
 .btn:hover {
   background-color: var(--inq-yellow);
+}
+.btn.btn--reverse {
+  background-color: var(--inq-yellow);
+  border: 0;
+  color: white;
+}
+.btn.btn--reverse:hover {
+  background-color: #ffa703;
+}
+.btn.btn--blue {
+  background-color: transparent;
+  border: 2px solid var(--inq-blue);
+  border-radius: 4px;
+  color: var(--inq-blue);
+}
+.btn.btn--blue:hover {
+  background-color: var(--inq-blue);
+  color: var(--inq-white);
 }
 /* Header */
 header {

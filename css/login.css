@@ -1,35 +1,67 @@
 /* Login */
 .login {
-  margin-top: 500px;
+  margin-top: 300px;
 }
 .login .inner {
-
+  width: 720px;
+  /* background-color: aqua; */
+  color: var(--inq-blue);
 }
 .login .text-title {
-
-}
-.login .text-title {
-
+  margin-bottom: 80px;
 }
 .login .text-title .title {
-
+  font-size: var(--large-font);
+  font-weight: 800;
 }
 .login .text-body {
-
+  /* text-align: center; */
+  margin: 0 auto;
+  position: relative;
 }
 .login .text-body .row {
-
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0;
+}
+.login .text-body .row input {
+  width: 720px;
+  height: 82px;
+  padding-left: 30px;
+  border: 2px solid var(--inq-blue);
+  color: var(--inq-blue);
 }
 .login .text-body .row .sub-title {
-
+  margin-bottom: 18px ;
 }
 .login .text-body .find-member {
-
+  position: absolute;
+  width: 720px;
+	right: 0;
+	left: 0;
+  margin: auto;
+  padding-left: 150px;
+}
+.login .text-body .find-member a {
+  color: var(--inq-blue);
 }
 .login .text-body .find-member .find-account {
-
+  margin-left: 30px;
 }
 .login .text-body .btn-group {
-
+  position: absolute;
+  width: 720px;
+  right: 0;
+	left: 0;
+  margin: auto;
+  margin-top: 50px;
+  padding-left: 180px;
+}
+.login .text-body .btn-group .btn-row {
+  margin: 50px 0;
+}
+.login .text-body .btn-group input {
+  width: 390px;
+  height: 82px;
 }
 
