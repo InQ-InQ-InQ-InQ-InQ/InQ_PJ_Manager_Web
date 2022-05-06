@@ -14,8 +14,7 @@ import javax.persistence.EntityManager;
 @Transactional
 public class skillTest {
 
-    @Autowired
-    EntityManager em;
+    @Autowired EntityManager em;
 
     @Test
     void memberSKillTest() {
