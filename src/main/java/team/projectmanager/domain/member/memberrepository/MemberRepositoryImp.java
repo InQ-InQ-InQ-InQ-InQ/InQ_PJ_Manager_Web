@@ -26,13 +26,13 @@ public class MemberRepositoryImp implements MemberRepository{
     }
 
     @Override
-    public Member findByLoginId(String loginId) {
+    public Optional<Member> findByLoginId(String loginId) {
         String query = "select m from Member m where m.loginId = :loginId";
         List<Member> resultList = em.createQuery(query, Member.class)
                 .setParameter("loginId", loginId)
                 .getResultList();
-        if (resultList.isEmpty()) return null;
-        else return resultList.get(0);
+        if (resultList.isEmpty()) return Optional.empty();
+        else return Optional.ofNullable(resultList.get(0));
     }
 
     @Override
