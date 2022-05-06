@@ -43,4 +43,8 @@ public class Project {
         comment.setProject(this);
         getComments().add(comment);
     }
+
+    public void update(ProjectUpdateDto dto) {
+        // 나중에 프론트와 얘기를 마친후 구현
+    }
 }

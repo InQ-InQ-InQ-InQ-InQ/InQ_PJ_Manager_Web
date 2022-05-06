@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
-public class DbMemberRepository implements MemberRepository{
+public class MemberRepositoryImp implements MemberRepository{
 
     private final EntityManager em;
 

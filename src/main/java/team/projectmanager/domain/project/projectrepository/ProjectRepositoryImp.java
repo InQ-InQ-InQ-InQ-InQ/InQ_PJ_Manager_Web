@@ -9,7 +9,7 @@ import java.util.List;
 
 @Repository
 @RequiredArgsConstructor
-public class DbProjectRepository implements ProjectRepository{
+public class ProjectRepositoryImp implements ProjectRepository{
 
     private final EntityManager em;
 

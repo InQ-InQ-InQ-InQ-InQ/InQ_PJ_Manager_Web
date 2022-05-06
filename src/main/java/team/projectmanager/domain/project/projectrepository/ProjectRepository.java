@@ -16,6 +16,4 @@ public interface ProjectRepository {
     Project findByName(String name);
 
     List<Project> findAll();
-
-    default void update(Project project, ProjectUpdateDto dto){}
 }

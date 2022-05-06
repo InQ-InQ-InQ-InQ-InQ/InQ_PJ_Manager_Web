@@ -17,6 +17,4 @@ public interface MemberRepository {
     Member findByName(String name);
 
     List<Member> findAll();
-
-    default void update(Member member, MemberUpdateDto dto) {}
 }

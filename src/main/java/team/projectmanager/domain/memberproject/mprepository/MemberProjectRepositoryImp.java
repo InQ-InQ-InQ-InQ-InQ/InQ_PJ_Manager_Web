@@ -8,7 +8,7 @@ import javax.persistence.EntityManager;
 
 @Repository
 @RequiredArgsConstructor
-public class DbMemberProjectRepository implements MemberProjectRepository{
+public class MemberProjectRepositoryImp implements MemberProjectRepository{
 
     private final EntityManager em;
 
