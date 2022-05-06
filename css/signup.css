@@ -31,6 +31,13 @@
   border: 2px solid var(--inq-blue);
   color: var(--inq-blue);
 }
+.signup .text-body .row select {
+  width: 756px;
+  height: 88px;
+  padding-left: 30px;
+  border: 2px solid var(--inq-blue);
+  color: var(--inq-blue);
+}
 .signup .btn-row {
   position: absolute;
   width: 720px;

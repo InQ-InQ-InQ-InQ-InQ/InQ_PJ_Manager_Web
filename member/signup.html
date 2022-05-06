@@ -58,20 +58,29 @@
             pattern=".+@globex\.com">
         </div>
         <div class="row">
-          <label for="memberPosition" class="sub-title">포지션</label>
-          <input type="text" id="memberPosition" name="memberPosition" required >
+          <label for="memberPosition" class="sub-title">포지션*</label>
+          <select name="memberPosition" id="memberPosition" required>
+            <option value="">--- Postion ---</option>
+            <option value="fullstack">Full Stack</option>
+            <option value="backend">Backend</option>
+            <option value="frontend">Frontend</option>
+            <option value="ios">Ios</option>
+            <option value="android">Android</option>
+            <option value="ai">AI</option>
+            <option value="null">Null</option>
+          </select>
         </div>
         <div class="row">
           <label for="memberSkill" class="sub-title">보유기술</label>
-          <input type="text" id="memberSkill" name="memberSkill" required >
+          <input type="text" id="memberSkill" name="memberSkill">
         </div>
         <div class="row">
           <label for="memberGithub" class="sub-title">깃허브</label>
-          <input type="text" id="memberGithub" name="memberGithub" required >
+          <input type="text" id="memberGithub" name="memberGithub">
         </div>
         <div class="row">
-          <label for="memberInfo" class="sub-title">자기소개</label>
-          <input type="text" id="memberInfo" name="memberInfo" required >
+          <label for="memberInfo" class="sub-title">한 줄 자기소개</label>
+          <input type="text" id="memberInfo" name="memberInfo" maxlength="25">
         </div>
 
         <div class="btn-row">

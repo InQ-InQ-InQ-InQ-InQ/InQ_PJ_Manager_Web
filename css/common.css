@@ -15,7 +15,7 @@ body {
   font-size: var(--mideum-font);
   font-weight: 400;
   line-height: 1.4; /*글자의 행간을 줌 (줄높이)*/
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 img {
   display: block;
@@ -25,7 +25,8 @@ a {
   /* 모든 a태그의 밑줄을 없애기 */
   text-decoration: none;
 }
-input {
+input,
+select {
   font-size: 32px;
 }
 .inner {
