@@ -23,21 +23,21 @@ public class LoginController {
     @GetMapping("/login")
     public String loginForm(@ModelAttribute("loginForm") LoginForm loginForm) {
 
-        return "loginForm";
+        return "login/loginForm";
     }
 
     @PostMapping("/login")
     public String loginForm(@Validated @ModelAttribute LoginForm loginForm,
                             BindingResult bindingResult, HttpServletRequest request) {
         if (bindingResult.hasErrors()) {
-            return "loginForm";
+            return "login/loginForm";
         }
 
         Member loginMember = loginService.login(loginForm.getLoginId(), loginForm.getPw());
 
         if (loginMember == null) {
             bindingResult.reject("loginFail", "아이디 혹은 비밀번호가 틀립니다.");
-            return "loginForm";
+            return "login/loginForm";
         }
 
         HttpSession session = request.getSession();
