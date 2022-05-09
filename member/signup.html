@@ -12,6 +12,8 @@
   <!-- CSS 파일 연결 -->
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/signup.css">
+  <!-- js 파일 연결 -->
+  <script src="../js/signup.js"></script>
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
@@ -72,6 +74,20 @@
         </div>
         <div class="row">
           <label for="memberSkill" class="sub-title">보유기술</label>
+          <div class="modal-btn">
+            <button class="btn btn--blue-reverse" type="button">선택하기</button>
+          </div>
+            <div id="modal" class="modal-overlay">
+              <div class="modal-window">
+                <div class="close-area">X</div>
+                <div class="content">
+                  <p>가나다라마바사 아자차카타파하</p>
+                  <p>가나다라마바사 아자차카타파하</p>
+                  <p>가나다라마바사 아자차카타파하</p>
+                  <p>가나다라마바사 아자차카타파하</p>
+                </div>
+              </div>
+            </div>
           <input type="text" id="memberSkill" name="memberSkill">
         </div>
         <div class="row">
