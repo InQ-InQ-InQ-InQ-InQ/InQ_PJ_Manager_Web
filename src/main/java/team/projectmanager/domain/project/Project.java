@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import team.projectmanager.domain.comment.Comment;
 import team.projectmanager.domain.memberproject.MemberProject;
+import team.projectmanager.domain.position.Position;
 import team.projectmanager.domain.position.PositionEntity;
 
 import javax.persistence.*;
@@ -35,9 +36,10 @@ public class Project {
 
     private LocalDate endDate;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "project_id")
-    private List<PositionEntity> positions = new ArrayList<>();
+    @ElementCollection
+    @CollectionTable(name = "project_positions",
+                    joinColumns = @JoinColumn(name = "project_id"))
+    private List<Position> positions = new ArrayList<>();
 
     @OneToMany(mappedBy = "project")
     private List<MemberProject> memberProjects =  new ArrayList<>();
@@ -53,13 +55,5 @@ public class Project {
     public void addComment(Comment comment) {
         comment.setProject(this);
         getComments().add(comment);
-    }
-
-    public void addPosition(PositionEntity position) {
-        positions.add(position);
-    }
-
-    public void removePosition(PositionEntity position) {
-        positions.removeIf(p -> p.getId().equals(position.getId()));
     }
 }
