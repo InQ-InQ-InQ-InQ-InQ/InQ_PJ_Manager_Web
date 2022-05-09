@@ -1,11 +1,12 @@
-package team.projectmanager.domain.skills;
+package team.projectmanager.domain.skill;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 import javax.persistence.*;
 
 @Entity
-@Getter
+@Getter @EqualsAndHashCode
 public class SkillEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,10 +15,10 @@ public class SkillEntity {
 
     @Column(name = "skill_name")
     @Enumerated(EnumType.STRING)
-    private Skills name;
+    private Skills skill;
 
-    public SkillEntity(Skills name) {
-        this.name = name;
+    public SkillEntity(Skills skill) {
+        this.skill = skill;
     }
 
     protected SkillEntity() {

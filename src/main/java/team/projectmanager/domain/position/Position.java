@@ -1,4 +1,4 @@
-package team.projectmanager.domain.member;
+package team.projectmanager.domain.position;
 
 public enum Position {
     BE, FE, IOS, AND, AI
