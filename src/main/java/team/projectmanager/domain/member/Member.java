@@ -31,7 +31,8 @@ public class Member {
 
     @ElementCollection
     @CollectionTable(name = "member_skills",
-                     joinColumns = @JoinColumn(name = "member_id"))
+            joinColumns = @JoinColumn(name = "member_id"))
+    @Enumerated(EnumType.STRING)
     private List<Skills> skills = new ArrayList<>();
 
     @OneToMany(mappedBy = "member")

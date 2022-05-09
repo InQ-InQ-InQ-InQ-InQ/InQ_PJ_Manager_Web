@@ -39,6 +39,7 @@ public class Project {
     @ElementCollection
     @CollectionTable(name = "project_positions",
                     joinColumns = @JoinColumn(name = "project_id"))
+    @Enumerated(EnumType.STRING)
     private List<Position> positions = new ArrayList<>();
 
     @OneToMany(mappedBy = "project")
