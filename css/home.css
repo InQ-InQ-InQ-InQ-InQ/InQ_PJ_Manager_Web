@@ -1,20 +1,84 @@
+/* Cards */
+.cards {
+
+}
+.cards .card-image {
+
+}
+.cards .image-full {
+
+}
+.cards .image-title {
+
+}
+.cards .card-info {
+  display: flex;
+}
+.cards .card-info .info-left {
+
+}
+.cards .card-info .info-left  .info-recruit {
+
+}
+.cards .card-info .info-left .info-recruit .recruit-date {
+
+}
+.cards .card-info .info-right {
+
+}
+.cards .card-info .info-right .info-progress {
+
+}
 /* Member Information */
-/* .inner {
-  width: 1200px;
-} */
 .member-info {
-  width: 2000px;
-  margin: 0 auto;
-  position: relative;
-  margin-top: 300px;
+  margin-top: 200px;
+  background-image: url("../images/home_back.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .member-info .inner {
-  color: var(--inq-blue);
+  color: var(--font-black);
+  width: 2000px;
+  padding-top: 200px;
+  /* margin: 0 auto;
+  position: relative; */
 }
 .member-info .text-title {
-  
+  margin-bottom: 80px;
 }
-.member-info .text-title .title{
-  font-size: var(--large-font);
+.member-info .text-title .title {
+  font-size: var(--title-font);
   font-weight: 800;
+}
+.member-info .text-body {
+  display: flex;
+}
+.member-info .text-body .row {
+  border: 8px solid var(--inq-white);
+  border-radius: 10px;
+  background-color: var(--inq-white);
+  height: 450px;
+}
+.member-info .text-body .row .member-skill {
+  width: 500px;
+  height: 200px;
+}
+.member-info .text-body .row .member-skill .skill-title {
+  font-size: var(--sub-title-font);
+  font-weight: 600;
+}
+.member-info .text-body .row .member-skill .skill-content {
+
+}
+.member-info .text-body .row .member-project {
+
+}
+.member-info .text-body .row .member-project .project-title {
+
+}
+.member-info .text-body .row .member-project .project-content {
+
+}
+.member-info .text-body .row .member-project .project-content .project-sildes {
+
 }
