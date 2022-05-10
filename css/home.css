@@ -75,7 +75,13 @@
   font-weight: 600;
 }
 .member-info .text-body .row .member-skill .skill-content {
-
+  display: inline-block; 
+  /* margin 부분 겹침으로 인해 margin 먹히지 않음 -> inline-block으로 변경으로 해결 */
+  border-radius: 8px;
+  background-color: var(--inq-yellow);
+  /* 색상 랜덤으로 바뀌게 하고 싶음 */
+  padding: 12px;
+  margin-top: 20px;
 }
 .member-info .text-body .row .member-project {
   width: 1000px;
