@@ -3,7 +3,7 @@
 
 }
 .cards .card-image {
-
+  
 }
 .cards .image-full {
 
@@ -54,14 +54,21 @@
   display: flex;
 }
 .member-info .text-body .row {
-  border: 8px solid var(--inq-white);
-  border-radius: 10px;
-  background-color: var(--inq-white);
+  position: relative;
+  z-index: 8;
   height: 450px;
+  /* background-color: var(--inq-white); */
+  border-radius: 10px;
+  /* opacity: 0.9; -> 배경 + 자식요소까지 투명해짐*/
+  margin-right: 100px;
+  margin-bottom: 100px;
+  background-color: rgba(255,255,255,0.9);
+  /* rgba를 활용함으로 배경만 투명하게 함 */
 }
 .member-info .text-body .row .member-skill {
   width: 500px;
   height: 200px;
+  margin: 40px;
 }
 .member-info .text-body .row .member-skill .skill-title {
   font-size: var(--sub-title-font);
@@ -71,9 +78,13 @@
 
 }
 .member-info .text-body .row .member-project {
-
+  width: 1000px;
+  height: 200px;
+  margin: 40px;
 }
 .member-info .text-body .row .member-project .project-title {
+  font-size: var(--sub-title-font);
+  font-weight: 600;
 
 }
 .member-info .text-body .row .member-project .project-content {
