@@ -1,0 +1,20 @@
+/* Member Information */
+/* .inner {
+  width: 1200px;
+} */
+.member-info {
+  width: 2000px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 300px;
+}
+.member-info .inner {
+  color: var(--inq-blue);
+}
+.member-info .text-title {
+  
+}
+.member-info .text-title .title{
+  font-size: var(--large-font);
+  font-weight: 800;
+}
