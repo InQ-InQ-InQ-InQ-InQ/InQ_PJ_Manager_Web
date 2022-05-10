@@ -26,6 +26,7 @@ img {
 a {
   /* 모든 a태그의 밑줄을 없애기 */
   text-decoration: none;
+  color: var(--font-black);
 }
 input,
 select {

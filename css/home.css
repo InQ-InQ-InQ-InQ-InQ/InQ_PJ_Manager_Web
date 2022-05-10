@@ -39,12 +39,12 @@
 .member-info .inner {
   color: var(--font-black);
   width: 2000px;
-  padding-top: 200px;
+  padding-top: 100px;
   /* margin: 0 auto;
   position: relative; */
 }
 .member-info .text-title {
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 .member-info .text-title .title {
   font-size: var(--title-font);
@@ -65,9 +65,33 @@
   background-color: rgba(255,255,255,0.9);
   /* rgba를 활용함으로 배경만 투명하게 함 */
 }
-.member-info .text-body .row .member-skill {
+.member-info .text-body .row .member-detail {
   width: 500px;
-  height: 200px;
+  margin: 40px;
+}
+.member-info .text-body .row .member-detail .detail-title {
+  font-size: var(--sub-title-font);
+  font-weight: 600;
+}
+.member-info .text-body .row .member-detail .detail-title .btn {
+  /* display: inline-block; 
+  border-radius: 8px;
+  background-color: var(--inq-yellow);
+  text-align: center;
+  padding: 12px;
+  margin: 3px 12px 0 2px; */
+}
+.member-info .text-body .row .member-detail .detail-content.a-font {
+  display: inline-block;
+  margin: 12px 0;
+  color: var(--inq-white);
+}
+.member-info .text-body .row .member-detail .detail-content {
+  display: inline-block;
+  margin: 12px 0;
+}
+.member-info .text-body .row .member-skill {
+  width: 350px;
   margin: 40px;
 }
 .member-info .text-body .row .member-skill .skill-title {
@@ -81,11 +105,10 @@
   background-color: var(--inq-yellow);
   /* 색상 랜덤으로 바뀌게 하고 싶음 */
   padding: 12px;
-  margin-top: 20px;
+  margin: 12px 12px 0 2px;
 }
 .member-info .text-body .row .member-project {
-  width: 1000px;
-  height: 200px;
+  width: 750px;
   margin: 40px;
 }
 .member-info .text-body .row .member-project .project-title {
@@ -94,8 +117,21 @@
 
 }
 .member-info .text-body .row .member-project .project-content {
-
+  margin: 12px 0;
 }
-.member-info .text-body .row .member-project .project-content .project-sildes {
+.member-info .text-body .row .member-project .project-content .project-progress {
+  display: inline-block; 
+  border-radius: 8px;
+  background-color: var(--inq-yellow);
+  /* 각 진행상황마다 색을 다르게 하고 싶음 */
+  width: 90px;
+  text-align: center;
+  padding: 12px;
+  margin: 3px 12px 0 2px;
+}
+/* .member-info .text-body .row .member-project .project-content .project-progress::after {
+  content: " |";
+} */
+.member-info .text-body .row .member-project .project-content .project-name {
 
 }
