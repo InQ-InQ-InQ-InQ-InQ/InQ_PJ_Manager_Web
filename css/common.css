@@ -37,6 +37,7 @@ select {
   margin: 0 auto;
   position: relative; /* 자식요소 때문에 position값을 넣는 것이기에 문제가 되지 않기 위해 relative로 함 */
 }
+/* Button */
 .btn {
   width: 250px;
   padding: 10px;
@@ -81,6 +82,38 @@ select {
 .btn.btn--blue-reverse:hover {
   background-color: transparent;
   color: var(--inq-blue);
+}
+/* Card */
+/* Cards */
+.cards {
+
+}
+.cards .card-image {
+  
+}
+.cards .image-full {
+
+}
+.cards .image-title {
+
+}
+.cards .card-info {
+  display: flex;
+}
+.cards .card-info .info-left {
+
+}
+.cards .card-info .info-left  .info-recruit {
+
+}
+.cards .card-info .info-left .info-recruit .recruit-date {
+
+}
+.cards .card-info .info-right {
+
+}
+.cards .card-info .info-right .info-progress {
+
 }
 /* Header */
 header {

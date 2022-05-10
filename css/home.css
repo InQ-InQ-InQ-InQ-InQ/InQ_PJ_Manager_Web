@@ -1,34 +1,3 @@
-/* Cards */
-.cards {
-
-}
-.cards .card-image {
-  
-}
-.cards .image-full {
-
-}
-.cards .image-title {
-
-}
-.cards .card-info {
-  display: flex;
-}
-.cards .card-info .info-left {
-
-}
-.cards .card-info .info-left  .info-recruit {
-
-}
-.cards .card-info .info-left .info-recruit .recruit-date {
-
-}
-.cards .card-info .info-right {
-
-}
-.cards .card-info .info-right .info-progress {
-
-}
 /* Member Information */
 .member-info {
   margin-top: 200px;
@@ -73,14 +42,6 @@
   font-size: var(--sub-title-font);
   font-weight: 600;
 }
-.member-info .text-body .row .member-detail .detail-title .btn {
-  /* display: inline-block; 
-  border-radius: 8px;
-  background-color: var(--inq-yellow);
-  text-align: center;
-  padding: 12px;
-  margin: 3px 12px 0 2px; */
-}
 .member-info .text-body .row .member-detail .detail-content.a-font {
   display: inline-block;
   margin: 12px 0;
@@ -114,7 +75,6 @@
 .member-info .text-body .row .member-project .project-title {
   font-size: var(--sub-title-font);
   font-weight: 600;
-
 }
 .member-info .text-body .row .member-project .project-content {
   margin: 12px 0;
@@ -131,7 +91,4 @@
 }
 /* .member-info .text-body .row .member-project .project-content .project-progress::after {
   content: " |";
-} */
-.member-info .text-body .row .member-project .project-content .project-name {
-
-}
+}  => 글자 사이에 구분선 넣기 (가상요소 활용하기)*/
