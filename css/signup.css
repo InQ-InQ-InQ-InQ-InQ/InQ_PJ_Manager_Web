@@ -32,7 +32,7 @@
   color: var(--inq-blue);
 }
 .signup .text-body .row select {
-  width: 756px;
+  width: 720px;
   height: 88px;
   padding-left: 30px;
   border: 2px solid var(--inq-blue);
@@ -53,57 +53,30 @@
   margin-bottom: 300px;
 }
 /* Modal */
-#modal.modal-overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  /* background: rgba(255, 255, 255, 0.25); */
-  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
-  /* backdrop-filter: blur(1.5px); */
-  /* -webkit-backdrop-filter: blur(1.5px); */
-  /* border: 1px solid rgba(255, 255, 255, 0.18); */
-}
-#modal .modal-window {
-  background: rgba( 69, 139, 197, 0.70 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 13.5px );
-  -webkit-backdrop-filter: blur( 13.5px );
-  border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
-  width: 600px;
-  height: 600px;
-  position: relative;
-  top: -100px;
+.signup .text-body .row .modal-btn .btn {
+  width: 250px;
   padding: 10px;
+  font-size: var(--btn-font);
 }
-#modal .title {
-  padding-left: 10px;
-  display: inline;
-  text-shadow: 1px 1px 2px gray;
-  color: white;
+.signup .text-body .row .modal-dialog.modal-dialog-centered .modal-content .modal-header h5 {
+  padding: 12px;
+  font-weight: 700;
+  font-size: var(--large-font);
 }
-#modal .title h2 {
-  display: inline;
+.signup .text-body .row .modal-dialog.modal-dialog-centered .modal-content .modal-header button span {
+  font-size: 45px;
 }
-#modal .close-area {
-  display: inline;
-  float: right;
-  padding-right: 10px;
-  cursor: pointer;
-  text-shadow: 1px 1px 2px gray;
-  color: white;
+.signup .text-body .row .modal-dialog.modal-dialog-centered .modal-content {
+  
 }
-
-#modal .content {
-  margin-top: 20px;
-  padding: 0px 10px;
-  text-shadow: 1px 1px 2px gray;
-  color: white;
+.signup .text-body .row .modal-dialog.modal-dialog-centered .modal-content .modal-body {
+  display: flex;
+  flex-wrap: wrap;
+}
+.signup .text-body .row .modal-dialog.modal-dialog-centered .modal-content .modal-body .check-box input {
+  width: 40px;
+  height: 40px;
+  margin: 30px 8px 25px 30px;
+}
+.signup .text-body .row .modal-dialog.modal-dialog-centered .modal-content .modal-body .check-box label {
 }
