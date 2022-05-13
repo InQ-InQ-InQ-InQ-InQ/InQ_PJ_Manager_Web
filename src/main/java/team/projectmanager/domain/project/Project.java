@@ -4,8 +4,11 @@ import lombok.Getter;
 import lombok.Setter;
 import team.projectmanager.domain.comment.Comment;
 import team.projectmanager.domain.memberproject.MemberProject;
+import team.projectmanager.domain.position.Position;
+import team.projectmanager.domain.position.PositionEntity;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,8 +28,19 @@ public class Project {
     @Enumerated(EnumType.STRING)
     private ProjectStatus status;
 
-    @Embedded
-    private Introduction introduction;
+    private String introduction;
+
+    private LocalDate period;
+
+    private LocalDate startDate;
+
+    private LocalDate endDate;
+
+    @ElementCollection
+    @CollectionTable(name = "project_positions",
+                    joinColumns = @JoinColumn(name = "project_id"))
+    @Enumerated(EnumType.STRING)
+    private List<Position> positions = new ArrayList<>();
 
     @OneToMany(mappedBy = "project")
     private List<MemberProject> memberProjects =  new ArrayList<>();
