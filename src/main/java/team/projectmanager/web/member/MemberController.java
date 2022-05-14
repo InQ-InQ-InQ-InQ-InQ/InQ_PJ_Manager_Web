@@ -48,19 +48,12 @@ public class MemberController {
         }
 
         if (!memberForm.getPw().equals(memberForm.getCheckPw())) {
-            bindingResult.reject("NotEqualPw");
+            bindingResult.reject("NotEqualPw", "비밀번호가 일치하지 않습니다.");
             return "member/signup";
         }
 
-        Member member = new Member();
-        member.setName(memberForm.getName());
-        member.setLoginId(memberForm.getLoginId());
-        member.setEmail(memberForm.getEmail());
-        member.setGitAddress(memberForm.getGitAddress());
-        member.setPw(memberForm.getPw());
-        member.setPosition(memberForm.getPosition());
-        member.setSkills(memberForm.getSkills());
-        member.setIntro(memberForm.getIntro());
+        Member member = Member.createMember(memberForm.getName(), memberForm.getLoginId(), memberForm.getPw(), memberForm.getPosition(),
+                memberForm.getEmail(), memberForm.getGitAddress(), memberForm.getIntro(), memberForm.getSkills());
 
         memberService.join(member);
 

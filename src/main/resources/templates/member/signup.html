@@ -30,6 +30,12 @@
       $("#headers").load("../common/header_non.html");  // 원하는 파일 경로를 삽입
     });
   </script>
+  <style>
+    .field-error {
+      border-color: #dc3545;
+      color: #dc3545;
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -60,18 +66,23 @@
           <div class="row">
             <label for="signupPwCheck" class="sub-title">비밀번호 확인*</label>
             <input th:field="*{checkPw}" type="password" id="signupPwCheck" name="signupPwCheck" minlength="8" required >
+<!--            비밀번호 확인 오류 메세지-->
+            <div th:if="${#fields.hasGlobalErrors()}">
+              <p class="field-error" th:each="err : ${#fields.globalErrors()}"
+                 th:text="${err}">글로벌 오류 메시지</p>
+            </div>
           </div>
           <div class="row">
             <label for="signupEmail" class="sub-title">이메일*</label>
-            <input th:field="*{email}" type="email" id="signupEmail" name="signupEmail" required
-              pattern=".+@globex\.com">
+            <input th:field="*{email}" type="email" id="signupEmail" name="signupEmail" required >
+<!--              pattern=".+@globex\.com"-->
           </div>
           <div class="row">
             <label for="memberPosition" class="sub-title">포지션*</label>
-            <select name="memberPosition" id="memberPosition" required >
+            <select th:field="*{position}" name="memberPosition" id="memberPosition" required >
               <option value="">--- Postion ---</option>
               <th:blcok th:each="position : ${positionList}">
-                <option th:field="*{position}" th:value="${position.name()}" th:text="${position.name()}">Full Stack</option>
+                <option th:value="${position.name()}" th:text="${position.name()}">Full Stack</option>
               </th:blcok>
             </select>
           </div>
@@ -82,7 +93,7 @@
               <button type="button" class="btn btn-primary bton btn--blue-reverse" data-toggle="modal" data-target="#exampleModalCenter">
                 선택하기
               </button>
-              </div> <!--todo 컨트롤러 부분에서 마무리-->
+              </div>
 
             <!-- Modal -->
             <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
