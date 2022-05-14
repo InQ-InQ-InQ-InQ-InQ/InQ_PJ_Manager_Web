@@ -32,7 +32,7 @@
   color: var(--inq-blue);
 }
 .signup .text-body .row select {
-  width: 756px;
+  width: 720px;
   height: 88px;
   padding-left: 30px;
   border: 2px solid var(--inq-blue);
@@ -51,4 +51,32 @@
   width: 390px;
   height: 82px;
   margin-bottom: 300px;
+}
+/* Modal */
+.signup .text-body .row .modal-btn .btn {
+  width: 250px;
+  padding: 10px;
+  font-size: var(--btn-font);
+}
+.signup .text-body .row .modal-dialog.modal-dialog-centered .modal-content .modal-header h5 {
+  padding: 12px;
+  font-weight: 700;
+  font-size: var(--large-font);
+}
+.signup .text-body .row .modal-dialog.modal-dialog-centered .modal-content .modal-header button span {
+  font-size: 45px;
+}
+.signup .text-body .row .modal-dialog.modal-dialog-centered .modal-content {
+  
+}
+.signup .text-body .row .modal-dialog.modal-dialog-centered .modal-content .modal-body {
+  display: flex;
+  flex-wrap: wrap;
+}
+.signup .text-body .row .modal-dialog.modal-dialog-centered .modal-content .modal-body .check-box input {
+  width: 40px;
+  height: 40px;
+  margin: 30px 8px 25px 30px;
+}
+.signup .text-body .row .modal-dialog.modal-dialog-centered .modal-content .modal-body .check-box label {
 }

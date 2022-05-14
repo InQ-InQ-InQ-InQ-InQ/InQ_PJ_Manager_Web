@@ -1,5 +1,5 @@
 package team.projectmanager.domain.position;
 
 public enum Position {
-    BE, FE, IOS, AND, AI
+    Full_Stack, Backend, Frontend, IOS, Android, AI, NULL
 }

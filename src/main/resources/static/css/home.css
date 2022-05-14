@@ -1,0 +1,114 @@
+.custom-shape-divider-bottom-1652199240 {
+  position: absolute;
+  bottom: 200px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1652199240 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 400px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1652199240 .shape-fill {
+  fill: #FFFFFF;
+}
+/* Member Information */
+.member-info {
+  margin-top: 200px;
+  background-image: url("../images/home_back.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.member-info .inner {
+  color: var(--font-black);
+  width: 2000px;
+  padding-top: 100px;
+  /* margin: 0 auto;
+  position: relative; */  
+}
+.member-info .text-title {
+  margin-bottom: 40px;
+}
+.member-info .text-title .title {
+  font-size: var(--title-font);
+  font-weight: 800;
+}
+.member-info .text-body {
+  display: flex;
+}
+.member-info .text-body .row {
+  position: relative;
+  z-index: 8;
+  height: 450px;
+  /* background-color: var(--inq-white); */
+  border-radius: 10px;
+  /* opacity: 0.9; -> 배경 + 자식요소까지 투명해짐*/
+  margin-right: 100px;
+  margin-bottom: 530px;
+  background-color: rgba(255,255,255,0.9);
+  /* rgba를 활용함으로 배경만 투명하게 함 */
+}
+.member-info .text-body .row .member-detail {
+  width: 500px;
+  margin: 40px;
+}
+.member-info .text-body .row .member-detail .detail-title {
+  font-size: var(--sub-title-font);
+  font-weight: 600;
+}
+.member-info .text-body .row .member-detail .detail-content.a-font {
+  display: inline-block;
+  margin: 12px 0;
+  color: var(--inq-white);
+}
+.member-info .text-body .row .member-detail .detail-content {
+  display: inline-block;
+  margin: 12px 0;
+}
+.member-info .text-body .row .member-skill {
+  width: 350px;
+  margin: 40px;
+}
+.member-info .text-body .row .member-skill .skill-title {
+  font-size: var(--sub-title-font);
+  font-weight: 600;
+}
+.member-info .text-body .row .member-skill .skill-content {
+  display: inline-block; 
+  /* margin 부분 겹침으로 인해 margin 먹히지 않음 -> inline-block으로 변경으로 해결 */
+  border-radius: 8px;
+  background-color: var(--inq-yellow);
+  /* 색상 랜덤으로 바뀌게 하고 싶음 */
+  padding: 12px;
+  margin: 12px 12px 0 2px;
+}
+.member-info .text-body .row .member-project {
+  width: 750px;
+  margin: 40px;
+}
+.member-info .text-body .row .member-project .project-title {
+  font-size: var(--sub-title-font);
+  font-weight: 600;
+}
+.member-info .text-body .row .member-project .project-content {
+  margin: 12px 0;
+}
+.member-info .text-body .row .member-project .project-content .project-progress {
+  display: inline-block; 
+  border-radius: 8px;
+  background-color: var(--inq-yellow);
+  /* 각 진행상황마다 색을 다르게 하고 싶음 */
+  width: 90px;
+  text-align: center;
+  padding: 12px;
+  margin: 3px 12px 0 2px;
+}
+/* .member-info .text-body .row .member-project .project-content .project-progress::after {
+  content: " |";
+}  => 글자 사이에 구분선 넣기 (가상요소 활용하기)*/

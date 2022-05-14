@@ -4,6 +4,8 @@
   --inq-yellow: #FFD303;
   --inq-white: #EFF0F0;
   --font-black: #000000;
+  --title-font: 80px;
+  --sub-title-font: 50px;
   --large-font: 40px;
   --mideum-font: 32px;
   --small-font: 20px;
@@ -24,21 +26,24 @@ img {
 a {
   /* 모든 a태그의 밑줄을 없애기 */
   text-decoration: none;
+  color: var(--font-black);
 }
 input,
 select {
-  font-size: 32px;
+  font-size: var(--mideum-font);
 }
 .inner {
   width: 720px;
   margin: 0 auto;
   position: relative; /* 자식요소 때문에 position값을 넣는 것이기에 문제가 되지 않기 위해 relative로 함 */
 }
-.btn {
+/* Button */
+.bton {
   width: 250px;
   padding: 10px;
   border-radius: 4px;
   color: var(--font-black);
+  background-color: transparent;
   font-size: var(--btn-font);
   font-weight: 500;
   text-align: center; /*박스 안에서 글자 가운데 정렬*/
@@ -47,26 +52,68 @@ select {
   display: block; /* a나 span태그에 버튼 클래스를 부여했을 때도 버튼이 정상적으로 나오도록 */
   transition: .4s; /* hover시 자연스럽게 색상이 바뀌도록 */
 }
-.btn:hover {
+.bton:hover {
   background-color: var(--inq-yellow);
 }
-.btn.btn--reverse {
+.bton.btn--reverse {
   background-color: var(--inq-yellow);
   border: 0;
   color: white;
 }
-.btn.btn--reverse:hover {
+.bton.btn--reverse:hover {
   background-color: #ffa703;
 }
-.btn.btn--blue {
+.bton.btn--blue {
   background-color: transparent;
   border: 2px solid var(--inq-blue);
   border-radius: 4px;
   color: var(--inq-blue);
 }
-.btn.btn--blue:hover {
+.bton.btn--blue:hover {
   background-color: var(--inq-blue);
   color: var(--inq-white);
+}
+.bton.btn--blue-reverse {
+  background-color: var(--inq-blue);
+  border: 2px solid var(--inq-blue);
+  border-radius: 4px;
+  color: var(--inq-white);
+}
+.bton.btn--blue-reverse:hover {
+  background-color: transparent;
+  color: var(--inq-blue);
+}
+/* Card */
+/* Cards */
+.cards {
+
+}
+.cards .card-image {
+  
+}
+.cards .image-full {
+
+}
+.cards .image-title {
+
+}
+.cards .card-info {
+  display: flex;
+}
+.cards .card-info .info-left {
+
+}
+.cards .card-info .info-left  .info-recruit {
+
+}
+.cards .card-info .info-left .info-recruit .recruit-date {
+
+}
+.cards .card-info .info-right {
+
+}
+.cards .card-info .info-right .info-progress {
+
 }
 /* Header */
 header {

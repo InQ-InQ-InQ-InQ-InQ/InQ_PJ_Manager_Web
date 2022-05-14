@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 import team.projectmanager.domain.memberproject.MemberProject;
 import team.projectmanager.domain.position.Position;
-import team.projectmanager.domain.skill.SkillEntity;
 import team.projectmanager.domain.skill.Skills;;
 
 import javax.persistence.*;
@@ -28,6 +27,12 @@ public class Member {
 
     @Enumerated(EnumType.STRING)
     private Position position;
+
+    private String email;
+
+    private String gitAddress;
+
+    private String intro;
 
     @ElementCollection
     @CollectionTable(name = "member_skills",
