@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InQ Project Manager</title>
+  <!-- favicon 선언 -->
+  <link rel="icon" href="/images/inq_logo.png">
+  <!-- 브라우저 기본 CSS 초기화 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- CSS 파일 연결 -->
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/home.css">
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+  crossorigin="anonymous"></script>
+  <!-- Material icons -->
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp|Material+Symbols+Outlined" rel="stylesheet">
+  <!-- 공통 header 연결 -->
+  <script type="text/javascript">
+    $(document).ready( function() {
+      $("#headers").load("../common/header.html");  // 원하는 파일 경로를 삽입
+    });
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <div id="headers"></div>
+
+  <!-- Member Information -->
+  <section class="member-info">
+    <div class="inner">
+
+      <div class="text-title">
+        <span class="title">포지션</span>
+      </div>
+      <div class="text-body">
+        <div class="row">
+          <div class="member-detail">
+            <div class="detail-title">깃허브</div>
+              <button class="bton btn--blue-reverse " type="button">
+                <a class="detail-content a-font" href="https://github.com/InQ-InQ-InQ-InQ-InQ/InQ_PJ_Manager_Web">인큐 깃허브</a>
+              </button>
+          </div>
+          <div class="member-detail">
+            <div class="detail-title">한 줄 소개</div>
+              <span class="detail-content">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="member-skill">
+            <div class="skill-title">보유 스킬</div>
+            <span class="skill-content">HTML</span>
+            <span class="skill-content">CSS</span>
+            <span class="skill-content">JS</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="member-project">
+            <div class="project-title">참여한 프로젝트</div>
+            <a href="javascript:void(0)">
+              <div class="project-content">
+                <span class="project-progress">진행중</span>
+                <span class="project-name">[인큐] 프로젝트 관리 매니저</span>
+              </div>
+            </a>
+            <a href="javascript:void(0)">
+              <div class="project-content">
+                <span class="project-progress">완료</span>
+                <span class="project-name">"오늘의 약", 약 알리미</span>
+              </div>
+            </a>
+            <a href="javascript:void(0)">
+              <div class="project-content">
+                <span class="project-progress">모집중</span>
+                <span class="project-name">~ 나의 바나나 나무 ~ 느린 편지</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="custom-shape-divider-bottom-1652199240">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+      </svg>
+    </div>
+    
+  </section>
+
+  <!-- Project -->
+  <section class="project">
+    <div class="inner">
+
+      <div class="text-title">
+        <span class="title">프로젝트</span>
+      </div>
+      <div class="card-list">
+        <div class="card-sildes">
+          <div class="cards">
+            <div class="card-image">
+              <img class="image-full" src="./images/inq_logo.png" alt="card_image" />
+              <div class="image-title">프로젝트 관리 매니저</div>
+            </div>
+            <div class="card-info">
+              <div class="info-left">
+                <div class="info-date">
+                  모집기간
+                  <span class="recruit-date">22.05.10 - 22.05.20</span>
+                </div>
+              </div>
+              <div class="info-right">
+                <div class="info-member">
+                  <span class="material-symbols-outlined">person</span>
+                  <span class="member-personnel">
+                    2
+                     /
+                    5
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

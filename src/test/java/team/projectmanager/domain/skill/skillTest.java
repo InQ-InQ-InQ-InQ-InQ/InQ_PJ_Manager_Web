@@ -11,22 +11,4 @@ import javax.persistence.EntityManager;
 @SpringBootTest
 @Transactional
 public class skillTest {
-
-    @Autowired EntityManager em;
-
-    @Test
-    void memberSKillTest() {
-        Member member = new Member();
-        member.setName("hello");
-        em.persist(member);
-
-        SkillEntity skill = new SkillEntity(Skills.SPRING);
-
-        member.getSkills().add(skill);
-        em.flush();
-        em.clear();
-        Member findMember = em.find(Member.class, member.getId());
-        findMember.getSkills().removeIf(s -> s.getId().equals(skill.getId()));
-        em.flush();
-    }
 }

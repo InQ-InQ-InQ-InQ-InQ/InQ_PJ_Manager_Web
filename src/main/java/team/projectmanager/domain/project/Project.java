@@ -5,7 +5,6 @@ import lombok.Setter;
 import team.projectmanager.domain.comment.Comment;
 import team.projectmanager.domain.memberproject.MemberProject;
 import team.projectmanager.domain.position.Position;
-import team.projectmanager.domain.position.PositionEntity;
 
 import javax.persistence.*;
 import java.time.LocalDate;

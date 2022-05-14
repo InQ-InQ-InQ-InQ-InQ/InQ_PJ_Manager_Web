@@ -28,6 +28,12 @@ public class Member {
     @Enumerated(EnumType.STRING)
     private Position position;
 
+    private String email;
+
+    private String gitAddress;
+
+    private String intro;
+
     @ElementCollection
     @CollectionTable(name = "member_skills",
             joinColumns = @JoinColumn(name = "member_id"))
@@ -39,5 +45,19 @@ public class Member {
 
     public void removeMP(MemberProject memberProject) {
         getMemberProjects().removeIf(mp -> mp.getId().equals(memberProject.getId()));
+    }
+
+    public static Member createMember(String name, String loginId, String pw, Position position, String email, String gitAddress, String intro, List<Skills> skills) {
+        Member member = new Member();
+        member.setName(name);
+        member.setLoginId(loginId);
+        member.setEmail(email);
+        member.setGitAddress(gitAddress);
+        member.setPw(pw);
+        member.setPosition(position);
+        member.setSkills(skills);
+        member.setIntro(intro);
+
+        return member;
     }
 }
