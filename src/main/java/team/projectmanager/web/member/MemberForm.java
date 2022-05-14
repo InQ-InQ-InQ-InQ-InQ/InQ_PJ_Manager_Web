@@ -24,7 +24,7 @@ public class MemberForm {
 
     private Position position;
 
-    private List<Skills> skills = new ArrayList<>();
+    private List<Skills> skills;
 
     private String gitAddress;
 

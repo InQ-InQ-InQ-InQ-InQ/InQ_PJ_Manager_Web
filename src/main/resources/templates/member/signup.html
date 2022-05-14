@@ -71,7 +71,7 @@
             <select name="memberPosition" id="memberPosition" required >
               <option value="">--- Postion ---</option>
               <th:blcok th:each="position : ${positionList}">
-                <option th:field="*{position}" th:value="${position}">Full Stack</option>
+                <option th:field="*{position}" th:value="${position.name()}" th:text="${position.name()}">Full Stack</option>
               </th:blcok>
             </select>
           </div>
@@ -93,22 +93,22 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
+
                   </div>
                   <div th:each="skill : ${skillList}" class="modal-body">
-
                     <div class="check-box">
-                      <input type="checkbox" th:field="*{skills}" th:value="${skill}" id="HTML" name="HTML">
-                      <label th:for="${#ids.prev('skills')}" th:text="${skill}" for="HTML">HTML</label>
+                      <label th:for="${#ids.next('skills')}" th:text="${skill.name()}" for="HTML">HTML</label>
+                      <input type="checkbox" th:field="*{skills}" th:value="${skill.name()}" id="HTML" name="HTML">
                     </div>
-
                   </div>
+
                   <div class="modal-footer">
                     <button type="button" class="btn btn-primary bton btn--reverse">완료</button>
                   </div>
                 </div>
               </div>
             </div>
-            <input type="text" id="memberSkill" name="memberSkill">
+<!--            <input type="text" id="memberSkill" name="memberSkill">-->
           </div>
           <div class="row">
             <label for="memberGithub" class="sub-title">깃허브</label>

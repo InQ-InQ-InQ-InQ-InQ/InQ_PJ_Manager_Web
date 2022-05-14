@@ -22,6 +22,13 @@
       $("#headers").load("../common/header_non.html");  // 원하는 파일 경로를 삽입
     });
   </script>
+<!--  에러 클래스 추가-->
+  <style>
+    .field-error {
+      border-color: #dc3545;
+      color: #dc3545;
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -39,23 +46,32 @@
         <div class="row">
           <label for="loginId" class="sub-title">아이디</label>
           <input th:field="*{loginId}" type="text" id="loginId" name="loginId" required
-                minlength="4" maxlength="15">
+                minlength="4" maxlength="15" th:errorclass="field-error">
+          <div th:errors="*{loginId}"></div>
         </div>
         <div class="row">
           <label for="loginPw" class="sub-title">비밀번호</label>
-          <input th:field="*{pw}" type="password" id="loginPw" name="loginPw" minlength="8" required>
+          <input th:field="*{pw}" th:errorclass="field-error" type="password" id="loginPw" name="loginPw" minlength="8" required>
+          <div th:errors="*{pw}"></div>
         </div>
+
+<!--        글로벌 오류-->
+        <div th:if="${#fields.hasGlobalErrors()}">
+          <p class="field-error" th:each="err : ${#fields.globalErrors()}"
+             th:text="${err}">글로벌 오류 메시지</p>
+        </div>
+
         <div class="find-member">
           <a href="javascript:void(0)" class="find-account">아이디 찾기</a>
           <a href="javascript:void(0)" class="find-account">비밀번호 찾기</a>
         </div>
         <div class="btn-group">
           <div class="btn-row">
-            <button class="btn btn--reverse" type="submit" value="로그인하기"></button>
+            <input class="btn btn--reverse" type="submit" value="로그인하기">
           </div>
 
           <div class="btn-row">
-            <a class="btn_signup" href="javascript:void(0)"></a> 
+            <a class="btn_signup" th:href="@{/members/join}" href="javascript:void(0)">회원가입</a>
             <!-- 회원가입 페이지 링크 연결하기 -->
             <input class="btn btn--blue" type="button" value="회원 가입하기">
           </div>

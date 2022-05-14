@@ -37,19 +37,19 @@ public class MemberController {
     @GetMapping("join")
     public String signupForm(@ModelAttribute("memberForm") MemberForm memberForm) {
 
-        return "/member/signup";
+        return "member/signup";
     }
 
     @PostMapping("join")
     public String signup(@Validated @ModelAttribute MemberForm memberForm,
                          BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
-            return "/member/signup";
+            return "member/signup";
         }
 
         if (!memberForm.getPw().equals(memberForm.getCheckPw())) {
             bindingResult.reject("NotEqualPw");
-            return "/member/signup";
+            return "member/signup";
         }
 
         Member member = new Member();
