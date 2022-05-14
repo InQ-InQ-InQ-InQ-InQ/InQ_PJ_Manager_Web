@@ -10,8 +10,8 @@
   <!-- 브라우저 기본 CSS 초기화 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- CSS 파일 연결 -->
-  <link rel="stylesheet" href="../css/common.css">
-  <link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/login.css">
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
@@ -19,7 +19,7 @@
   <!-- 공통 header 연결 -->
   <script type="text/javascript">
     $(document).ready( function() {
-      $("#headers").load("../common/header_non.html");  // 원하는 파일 경로를 삽입
+      $("#headers").load("/common/header_non.html");  // 원하는 파일 경로를 삽입
     });
   </script>
 <!--  에러 클래스 추가-->
@@ -67,13 +67,14 @@
         </div>
         <div class="btn-group">
           <div class="btn-row">
-            <input class="btn btn--reverse" type="submit" value="로그인하기">
+            <input class="bton btn--reverse" type="submit" value="로그인하기">
           </div>
 
           <div class="btn-row">
-            <a class="btn_signup" th:href="@{/members/join}" href="javascript:void(0)">회원가입</a>
+            <a class="btn_signup" th:href="@{/members/join}" href="javascript:void(0)">
+              <input class="bton btn--blue" type="button" value="회원 가입하기">
+            </a>
             <!-- 회원가입 페이지 링크 연결하기 -->
-            <input class="btn btn--blue" type="button" value="회원 가입하기">
           </div>
         </div>
       </div>

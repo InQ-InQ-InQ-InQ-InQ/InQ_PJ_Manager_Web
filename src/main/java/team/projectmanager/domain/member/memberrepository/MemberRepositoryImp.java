@@ -22,7 +22,12 @@ public class MemberRepositoryImp implements MemberRepository{
 
     @Override
     public Member findById(Long id) {
-        return em.find(Member.class, id);
+        String query = "select m from Member m join fetch m.skills where m.id = :id";
+        List<Member> resultList = em.createQuery(query, Member.class)
+                .setParameter("id", id)
+                .getResultList();
+        if (resultList.isEmpty()) return null;
+        else return resultList.get(0);
     }
 
     @Override

@@ -52,9 +52,9 @@ select {
   display: block; /* a나 span태그에 버튼 클래스를 부여했을 때도 버튼이 정상적으로 나오도록 */
   transition: .4s; /* hover시 자연스럽게 색상이 바뀌도록 */
 }
-.bton:hover {
-  background-color: var(--inq-yellow);
-}
+/*.bton:hover {*/
+/*  background-color: var(--inq-yellow);*/
+/*}*/
 .bton.btn--reverse {
   background-color: var(--inq-yellow);
   border: 0;
