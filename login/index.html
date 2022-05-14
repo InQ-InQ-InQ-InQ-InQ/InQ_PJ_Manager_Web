@@ -34,31 +34,33 @@
       <div class="text-title">
         <span class="title">로그인</span>
       </div>
-      <div class="text-body">
-        <div class="row">
-          <label for="loginId" class="sub-title">아이디</label>
-          <input type="text" id="loginId" name="loginId" required
-                minlength="4" maxlength="15">
-        </div>
-        <div class="row">
-          <label for="loginPw" class="sub-title">비밀번호</label>
-          <input type="password" id="loginPw" name="loginPw" minlength="8" required>
-        </div>
-        <div class="find-member">
-          <a href="javascript:void(0)" class="find-account">아이디 찾기</a>
-          <a href="javascript:void(0)" class="find-account">비밀번호 찾기</a>
-        </div>
-        <div class="btn-group">
-          <div class="btn-row">
-            <input class="bton btn--reverse" type="button" value="로그인하기">
+      <form action="">
+        <div class="text-body">
+          <div class="row">
+            <label for="loginId" class="sub-title">아이디</label>
+            <input type="text" id="loginId" name="loginId" required
+                  minlength="4" maxlength="15">
           </div>
-          <div class="btn-row">
-            <!-- 회원가입 페이지 링크 연결하기 -->
-            <button class="bton btn--blue" onClick="location.href='../member/signup.html'" type="button">
-              회원 가입하기</button>
+          <div class="row">
+            <label for="loginPw" class="sub-title">비밀번호</label>
+            <input type="password" id="loginPw" name="loginPw" minlength="8" required>
+          </div>
+          <div class="find-member">
+            <a href="javascript:void(0)" class="find-account">아이디 찾기</a>
+            <a href="javascript:void(0)" class="find-account">비밀번호 찾기</a>
+          </div>
+          <div class="btn-group">
+            <div class="btn-row">
+              <input class="bton btn--reverse" type="button" value="로그인하기">
+            </div>
+            <div class="btn-row">
+              <!-- 회원가입 페이지 링크 연결하기 -->
+              <button class="bton btn--blue" onClick="location.href='../member/signup.html'" type="button">
+                회원 가입하기</button>
+            </div>
           </div>
         </div>
-      </div>
+      </form>
 
     </div>
   </section>
