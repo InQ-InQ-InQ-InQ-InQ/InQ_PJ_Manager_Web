@@ -58,6 +58,7 @@
             <label for="signupId" class="sub-title">아이디*</label>
             <input th:field="*{loginId}" type="text" id="signupId" name="signupId" required
                   minlength="4" maxlength="15">
+            <div th:class="field-error" th:errors="*{loginId}"></div>
           </div>
           <div class="row">
             <label for="signupPw" class="sub-title">비밀번호*</label>
@@ -67,10 +68,7 @@
             <label for="signupPwCheck" class="sub-title">비밀번호 확인*</label>
             <input th:field="*{checkPw}" type="password" id="signupPwCheck" name="signupPwCheck" minlength="8" required >
 <!--            비밀번호 확인 오류 메세지-->
-            <div th:if="${#fields.hasGlobalErrors()}">
-              <p class="field-error" th:each="err : ${#fields.globalErrors()}"
-                 th:text="${err}">글로벌 오류 메시지</p>
-            </div>
+            <div th:class="field-error" th:errors="*{checkPw}"></div>
           </div>
           <div class="row">
             <label for="signupEmail" class="sub-title">이메일*</label>

@@ -5,6 +5,7 @@ import lombok.Data;
 import team.projectmanager.domain.position.Position;
 import team.projectmanager.domain.skill.Skills;
 
+import javax.validation.constraints.Email;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +21,7 @@ public class MemberForm {
 
     private String checkPw;
 
+    @Email
     private String email;
 
     private Position position;

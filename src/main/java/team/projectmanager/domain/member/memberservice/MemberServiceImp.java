@@ -6,6 +6,8 @@ import org.springframework.transaction.annotation.Transactional;
 import team.projectmanager.domain.member.Member;
 import team.projectmanager.domain.member.memberrepository.MemberRepository;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class MemberServiceImp implements MemberService{
@@ -19,5 +21,9 @@ public class MemberServiceImp implements MemberService{
 
     public Member findById(Long id) {
         return memberRepository.findById(id);
+    }
+
+    public List<Member> findMembers() {
+        return memberRepository.findAll();
     }
 }

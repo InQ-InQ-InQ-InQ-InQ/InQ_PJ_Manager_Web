@@ -47,8 +47,14 @@ public class MemberController {
             return "member/signup";
         }
 
+        //아이디 중복 검증
+        if (checkDuplicatedLoginId(memberForm)) {
+            bindingResult.rejectValue("loginId", "DuplicatedLoginId", "존재하는 아이디 입니다.");
+            return "member/signup";
+        }
+        //비밀번호 확인 검즘
         if (!memberForm.getPw().equals(memberForm.getCheckPw())) {
-            bindingResult.reject("NotEqualPw", "비밀번호가 일치하지 않습니다.");
+            bindingResult.rejectValue("checkPw", "NotEqualPw", "비밀번호가 일치하지 않습니다.");
             return "member/signup";
         }
 
@@ -58,5 +64,15 @@ public class MemberController {
         memberService.join(member);
 
         return "redirect:/login";
+    }
+
+    private boolean checkDuplicatedLoginId(MemberForm memberForm) {
+        List<Member> members = memberService.findMembers();
+        for (Member member : members) {
+            if (member.getLoginId().equals(memberForm.getLoginId())) {
+                return true;
+            }
+        }
+        return false;
     }
 }
