@@ -28,6 +28,10 @@ a {
   text-decoration: none;
   color: var(--font-black);
 }
+a:hover {
+  text-decoration: none;
+  color: var(--font-black);
+}
 input,
 select {
   font-size: var(--mideum-font);
@@ -83,38 +87,6 @@ select {
   background-color: transparent;
   color: var(--inq-blue);
 }
-/* Card */
-/* Cards */
-.cards {
-
-}
-.cards .card-image {
-  
-}
-.cards .image-full {
-
-}
-.cards .image-title {
-
-}
-.cards .card-info {
-  display: flex;
-}
-.cards .card-info .info-left {
-
-}
-.cards .card-info .info-left  .info-recruit {
-
-}
-.cards .card-info .info-left .info-recruit .recruit-date {
-
-}
-.cards .card-info .info-right {
-
-}
-.cards .card-info .info-right .info-progress {
-
-}
 /* Header */
 header {
   position: fixed;
@@ -141,4 +113,47 @@ header .menu .login_name {
   position: absolute;
   right: 30px;
   bottom: 30px;
+}
+/* Card */
+.card {
+  width: 600px;
+  padding: 50px;
+  /* border: 3px solid var(--inq-blue); */
+  box-shadow: 7px 7px 7px 7px rgb(224, 222, 222);
+}
+.card .card-body {
+  margin-top: 50px;
+}
+.card .card-body .card-text {
+
+}
+.card .card-body .card-text.card-title {
+  font-weight: 700;
+  font-size: var(--large-font);
+}
+.card .card-body .card-text .card-info {
+
+}
+.card .card-body .card-text .card-info .info-left {
+  margin:20px 0 20px 0;
+}
+.card .card-body .card-text .card-info .info-left .info-date {
+
+}
+.card .card-body .card-text .card-info .info-left .info-date .recruit-date {
+
+}
+.card .card-body .card-text .card-info .info-right {
+
+}
+.card .card-body .card-text .card-info .info-right .info-member {
+  display: flex;
+}
+.card .card-body .card-text .card-info .info-right .info-member .symbol {
+  font-size: 50px;
+  color: #5b5b5b;
+}
+.card .card-body .card-text .card-info .info-right .info-member .member-personnel {
+  margin-top: 7px;
+  margin-left: 15px;
 }
