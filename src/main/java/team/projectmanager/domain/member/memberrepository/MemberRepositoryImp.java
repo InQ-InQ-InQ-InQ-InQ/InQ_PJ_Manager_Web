@@ -1,6 +1,7 @@
 package team.projectmanager.domain.member.memberrepository;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 import team.projectmanager.domain.member.Member;
 
@@ -10,6 +11,7 @@ import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
+@Slf4j
 public class MemberRepositoryImp implements MemberRepository{
 
     private final EntityManager em;
@@ -21,13 +23,15 @@ public class MemberRepositoryImp implements MemberRepository{
     }
 
     @Override
-    public Member findById(Long id) {
-        String query = "select m from Member m join fetch m.skills where m.id = :id";
-        List<Member> resultList = em.createQuery(query, Member.class)
-                .setParameter("id", id)
-                .getResultList();
-        if (resultList.isEmpty()) return null;
-        else return resultList.get(0);
+    public Member findById(Long id) {//todo 도대체 뭐가 문젠지 해결해보기
+//        String query = "select m from Member m join fetch m.skills where m.id = :id";
+//        List<Member> resultList = em.createQuery(query, Member.class)
+//                .setParameter("id", id)
+//                .getResultList();
+//        log.info("id = {}", id);
+//        if (resultList.isEmpty()) return null;
+//        else return resultList.get(0);
+        return em.find(Member.class, id);
     }
 
     @Override
