@@ -124,27 +124,12 @@ header .menu .login_name {
 .card .card-body {
   margin-top: 50px;
 }
-.card .card-body .card-text {
-
-}
 .card .card-body .card-text.card-title {
   font-weight: 700;
   font-size: var(--large-font);
 }
-.card .card-body .card-text .card-info {
-
-}
 .card .card-body .card-text .card-info .info-left {
   margin:20px 0 20px 0;
-}
-.card .card-body .card-text .card-info .info-left .info-date {
-
-}
-.card .card-body .card-text .card-info .info-left .info-date .recruit-date {
-
-}
-.card .card-body .card-text .card-info .info-right {
-
 }
 .card .card-body .card-text .card-info .info-right .info-member {
   display: flex;

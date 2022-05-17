@@ -66,9 +66,6 @@
 .signup .text-body .row .modal-dialog.modal-dialog-centered .modal-content .modal-header button span {
   font-size: 45px;
 }
-.signup .text-body .row .modal-dialog.modal-dialog-centered .modal-content {
-  
-}
 .signup .text-body .row .modal-dialog.modal-dialog-centered .modal-content .modal-body {
   display: flex;
   flex-wrap: wrap;
@@ -77,6 +74,4 @@
   width: 40px;
   height: 40px;
   margin: 30px 8px 25px 30px;
-}
-.signup .text-body .row .modal-dialog.modal-dialog-centered .modal-content .modal-body .check-box label {
 }
