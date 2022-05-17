@@ -138,3 +138,47 @@
 .project .card-list {
   display: flex;
 }
+.project .card-list .card {
+  margin: 0 50px 0 50px;
+}
+
+/* Swiper */
+.swiper {
+  width: calc(819px * 3 + 20px);
+  left: 50%;
+  margin-left: calc((819px * 3 + 20px) / -2);
+}
+
+.swiper-prev,
+.swiper-next {
+  width: 82px;
+  height: 82px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 800px;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .4s;
+}
+.swiper-prev .material-icons,
+.swiper-next .material-icons {
+  font-size: 60px;
+  font-weight: 300;
+}
+.swiper-prev {
+  left: 50%;
+  margin-left: -1380px;
+}
+.swiper-next {
+  right: 50%;
+  margin-right: -1380px;
+}
+.swiper-prev:hover,
+.swiper-next:hover {
+  background-color: #333;
+  color: #fff;
+}
