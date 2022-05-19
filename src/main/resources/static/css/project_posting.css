@@ -1,0 +1,107 @@
+/* Sign up */
+.project {
+  margin-top: 300px;
+}
+.project .inner {
+  color: var(--inq-blue);
+}
+.project .text-title {
+  margin-bottom: 80px;
+}
+.project .text-title .title {
+  font-size: var(--large-font);
+  font-weight: 800;
+}
+.project .text-body {
+  margin: 0 auto;
+  position: relative;
+}
+.project .text-body .row {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0;
+}
+.project .text-body .row .sub-title {
+  margin-bottom: 18px ;
+}
+.project .text-body .row input {
+  width: 720px;
+  height: 82px;
+  padding-left: 30px;
+  border: 2px solid var(--inq-blue);
+  color: var(--inq-blue);
+}
+.project .text-body .row select {
+  width: 720px;
+  height: 88px;
+  padding-left: 30px;
+  border: 2px solid var(--inq-blue);
+  color: var(--inq-blue);
+}
+.project .btn-row {
+  position: absolute;
+  width: 720px;
+  right: 0;
+	left: 0;
+  margin: auto;
+  margin-top: 50px;
+  padding-left: 180px;
+}
+.project .btn-row input {
+  width: 390px;
+  height: 82px;
+  margin-bottom: 300px;
+}
+/* 캘린더 css 변경 */
+.project .text-body .row .date-bundle input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(62%) sepia(77%) saturate(7274%) hue-rotate(175deg) brightness(94%) contrast(101%);
+  padding-right: 20px;
+}
+/* ::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  color: aqua;
+} */
+/* .project .text-body .row .date-bundle input::-webkit-calendar-picker-indicator {
+  background: url(https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/calendar-16.png) center/80% no-repeat;
+  color: yellow;
+} */
+.project .date-bundle {
+  display: flex;
+}
+.project .text-body .row .date-bundle .date-one {
+  width: 300px;
+  height: 82px;
+}
+.project .text-body .row .date-bundle span {
+  margin: 30px 50px 0 50px;
+}
+.project .text-body .row textarea {
+  border: 2px solid var(--inq-blue);
+  color: var(--inq-blue);
+  resize: none;
+  /* 하단 직선 두개 삭제 */
+}
+
+/* Modal */
+.project .text-body .row .modal-btn .btn {
+  width: 250px;
+  padding: 10px;
+  font-size: var(--btn-font);
+}
+.project .text-body .row .modal-dialog.modal-dialog-centered .modal-content .modal-header h5 {
+  padding: 12px;
+  font-weight: 700;
+  font-size: var(--large-font);
+}
+.project .text-body .row .modal-dialog.modal-dialog-centered .modal-content .modal-header button span {
+  font-size: 45px;
+}
+.project .text-body .row .modal-dialog.modal-dialog-centered .modal-content .modal-body {
+  display: flex;
+  flex-wrap: wrap;
+}
+.project .text-body .row .modal-dialog.modal-dialog-centered .modal-content .modal-body .check-box input {
+  width: 40px;
+  height: 40px;
+  margin: 30px 8px 25px 30px;
+}

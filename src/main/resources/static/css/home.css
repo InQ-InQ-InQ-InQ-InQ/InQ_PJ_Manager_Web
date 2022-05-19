@@ -58,6 +58,9 @@
   width: 500px;
   margin: 40px;
 }
+.member-info .text-body .row .member-detail.detail-second {
+  margin-top: 0;
+}
 .member-info .text-body .row .member-detail .detail-title {
   font-size: var(--sub-title-font);
   font-weight: 600;
@@ -91,6 +94,7 @@
 .member-info .text-body .row .member-project {
   width: 750px;
   margin: 40px;
+  position: relative;
 }
 .member-info .text-body .row .member-project .project-title {
   font-size: var(--sub-title-font);
@@ -104,11 +108,77 @@
   border-radius: 8px;
   background-color: var(--inq-yellow);
   /* 각 진행상황마다 색을 다르게 하고 싶음 */
-  width: 90px;
+  width: 108px;
   text-align: center;
   padding: 12px;
   margin: 3px 12px 0 2px;
 }
+.member-info .text-body .row .member-project .project-addinfo {
+  color: #807e7e;
+  position: absolute;
+  left: 40%;
+}
 /* .member-info .text-body .row .member-project .project-content .project-progress::after {
   content: " |";
 }  => 글자 사이에 구분선 넣기 (가상요소 활용하기)*/
+
+/* Project */
+.project .inner {
+  color: var(--font-black);
+  width: 2000px;
+  padding-top: 100px; 
+}
+.project .text-title {
+  margin-bottom: 80px;
+}
+.project .text-title .title {
+  font-size: var(--title-font);
+  font-weight: 800;
+}
+.project .card-list {
+  display: flex;
+}
+.project .card-list .card {
+  margin: 0 50px 0 50px;
+}
+
+/* Swiper */
+.swiper {
+  width: calc(819px * 3 + 20px);
+  left: 50%;
+  margin-left: calc((819px * 3 + 20px) / -2);
+}
+
+.swiper-prev,
+.swiper-next {
+  width: 82px;
+  height: 82px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 800px;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .4s;
+}
+.swiper-prev .material-icons,
+.swiper-next .material-icons {
+  font-size: 60px;
+  font-weight: 300;
+}
+.swiper-prev {
+  left: 50%;
+  margin-left: -1380px;
+}
+.swiper-next {
+  right: 50%;
+  margin-right: -1380px;
+}
+.swiper-prev:hover,
+.swiper-next:hover {
+  background-color: #333;
+  color: #fff;
+}
