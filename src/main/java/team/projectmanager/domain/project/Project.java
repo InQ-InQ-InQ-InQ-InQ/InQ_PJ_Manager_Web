@@ -2,6 +2,7 @@ package team.projectmanager.domain.project;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.apache.tomcat.jni.Local;
 import team.projectmanager.domain.comment.Comment;
 import team.projectmanager.domain.memberproject.MemberProject;
 import team.projectmanager.domain.position.Position;
@@ -55,5 +56,19 @@ public class Project {
     public void addComment(Comment comment) {
         comment.setProject(this);
         getComments().add(comment);
+    }
+
+    public static Project createProject(Long memberId, String name, LocalDate period, LocalDate startDate, LocalDate endDate, String introduction, List<Position> positions) {
+        Project project = new Project();
+        project.setAdminId(memberId);
+        project.setName(name);
+        project.setPeriod(period);
+        project.setStartDate(startDate);
+        project.setEndDate(endDate);
+        project.setIntroduction(introduction);
+        project.setPositions(positions);
+        project.setStatus(ProjectStatus.COLLECT);
+
+        return project;
     }
 }
