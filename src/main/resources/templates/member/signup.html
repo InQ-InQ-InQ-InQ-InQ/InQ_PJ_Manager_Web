@@ -22,8 +22,6 @@
   <!-- CSS 파일 연결 -->
   <link rel="stylesheet" href="/css/common.css">
   <link rel="stylesheet" href="/css/signup.css">
-  <!-- js 파일 연결 -->
-  <script src="/js/signup.js"></script>
   <!-- 공통 header 연결 -->
   <script type="text/javascript">
     $(document).ready( function() {
@@ -73,7 +71,6 @@
           <div class="row">
             <label for="signupEmail" class="sub-title">이메일*</label>
             <input th:field="*{email}" type="email" id="signupEmail" name="signupEmail" required >
-<!--              pattern=".+@globex\.com"-->
           </div>
           <div class="row">
             <label for="memberPosition" class="sub-title">포지션*</label>
