@@ -45,4 +45,13 @@ public class MemberProjectRepositoryImp implements MemberProjectRepository{
         if (resultList.isEmpty()) return null;
         else return resultList.get(0);
     }
+
+    @Override
+    public List<MemberProject> findAll() {
+        String query = "select mp from MemberProject mp " +
+                "join fetch mp.member " +
+                "join fetch mp.project";
+        return em.createQuery(query, MemberProject.class)
+                .getResultList();
+    }
 }
