@@ -1,0 +1,89 @@
+/* Project Information */
+.project-info {
+  margin-top: 300px;
+}
+.project-info .inner {
+  width: 2000px;
+}
+.project-info .text-title {
+  font-size: var(--title-font);
+  font-weight: 700;
+  text-align: center;
+  background-color: var(--inq-blue);
+  padding: 80px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 10px;
+}
+.project-info .text-title .title {
+  
+}
+.project-info .text-body {
+  display: flex;
+  margin-top: 50px;
+}
+.project-info .text-body .box {
+  background-color: var(--inq-white);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 10px;
+
+}
+.project-info .text-body .row {
+  padding: 50px;
+  margin: 0 50px 40px 0;
+}
+.project-info .text-body .body-left {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.project-info .text-body .body-left .title .icon {
+  
+}
+.project-info .text-body .body-left .title .text {
+  
+}
+.project-info .text-body .body-left .content {
+  
+}
+.project-info .text-body .body-left .content .icon {
+  
+}
+.project-info .text-body .body-left .content .role {
+  
+}
+.project-info .text-body .body-left .recruit-box {
+  display: flex;
+  flex-direction: column;
+}
+.project-info .text-body .body-left .recruit-box .title {
+  
+}
+.project-info .text-body .body-left .recruit-box .content {
+  display: flex;
+  flex-direction: column;
+}
+.project-info .text-body .body-left .btn {
+
+}
+.project-info .text-body .project-explanation {
+  width: 70%;
+  padding: 50px;
+}
+.project-info .text-body .project-explanation .sub-title {
+  display: flex;
+}
+.project-info .text-body .project-explanation .sub-title .icon {
+
+}
+.project-info .text-body .project-explanation .sub-title .title {
+
+}
+.project-info .text-body .project-explanation .sub-title .recruit-term {
+  
+}
+.project-info .text-body .project-explanation .sub-title .project-term {
+
+}
+.project-info .text-body .project-explanation .sub-title .project-content {
+
+}
