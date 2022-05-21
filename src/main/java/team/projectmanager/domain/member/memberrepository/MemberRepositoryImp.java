@@ -24,14 +24,15 @@ public class MemberRepositoryImp implements MemberRepository{
 
     @Override
     public Member findById(Long id) {//todo 도대체 뭐가 문젠지 해결해보기
-//        String query = "select m from Member m join fetch m.skills where m.id = :id";
-//        List<Member> resultList = em.createQuery(query, Member.class)
-//                .setParameter("id", id)
-//                .getResultList();
-//        log.info("id = {}", id);
-//        if (resultList.isEmpty()) return null;
-//        else return resultList.get(0);
-        return em.find(Member.class, id);
+        String query = "select distinct m from Member m " +
+                "left join fetch m.skills " +
+                "where m.id = :id";
+        List<Member> resultList = em.createQuery(query, Member.class)
+                .setParameter("id", id)
+                .getResultList();
+        log.info("id = {}", id);
+        if (resultList.isEmpty()) return null;
+        else return resultList.get(0);
     }
 
     @Override

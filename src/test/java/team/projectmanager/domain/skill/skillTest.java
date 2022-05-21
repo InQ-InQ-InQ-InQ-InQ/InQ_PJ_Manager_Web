@@ -37,7 +37,7 @@ public class skillTest {
         Member findMember = mr.findById(member.getId());
         System.out.println(member.getId());
         //then
-        assertThat(true).isEqualTo(findMember == null);
+        assertThat(true).isEqualTo(findMember != null);
     }
 
     @Test
