@@ -83,38 +83,59 @@
   font-size: var(--large-font);
   font-weight: 700;
 }
-.project-info .text-body .project-explanation {
+.project-info .text-body .body-right {
   width: 70%;
   padding: 50px;
   background-color: var(--inq-white);
 }
-.project-info .text-body .project-explanation .sub-title {
+.project-info .text-body .body-right .sub-title {
   display: flex;
   color: var(--inq-blue);
   margin-bottom: 50px;
 }
-.project-info .text-body .project-explanation .sub-title .icon {
+.project-info .text-body .body-right .sub-title .icon {
   font-size: 50px;
   margin-right: 13px;
 }
-.project-info .text-body .project-explanation .sub-title .title {
+.project-info .text-body .body-right .sub-title .title {
   font-size: var(--large-font);
   font-weight: 700;
 }
-.project-info .text-body .project-explanation .sub-body {
+.project-info .text-body .body-right .sub-body {
   margin-left: 60px;
   margin-right: 60px;
 }
-.project-info .text-body .project-explanation .sub-body .font-style {
+.project-info .text-body .body-right .sub-body .font-style {
   margin-bottom: 40px;
 }
-.project-info .text-body .project-explanation .sub-body .font-style .state-text {
+.project-info .text-body .body-right .sub-body .font-style .state-text {
   font-weight: 700;
   margin-right: 15px;
 }
-.project-info .text-body .project-explanation .sub-body .font-style .project-state  {
+.project-info .text-body .body-right .sub-body .font-style .project-state  {
   border-radius: 8px;
   background-color: var(--inq-yellow);
   /* 각 진행상황마다 색을 다르게 하고 싶음 */
   padding: 8px 13px;
+}
+
+/* Modal */
+.modal-dialog.modal-dialog-centered .modal-content .modal-header h5 {
+  padding: 12px;
+  font-weight: 700;
+  font-size: var(--large-font);
+}
+.modal-dialog.modal-dialog-centered .modal-content .modal-header button span {
+  font-size: 45px;
+}
+.modal-dialog.modal-dialog-centered .modal-content .modal-body .radio-box input {
+  width: 40px;
+  height: 40px;
+  margin: 30px 10px 25px 30px;
+}
+.modal-dialog.modal-dialog-centered .modal-content .modal-body .radio-box label {
+  font-size: 35px;
+}
+.modal-dialog.modal-dialog-centered .modal-footer .bton {
+  font-size: 35px;
 }
