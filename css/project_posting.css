@@ -9,7 +9,7 @@
   margin-bottom: 80px;
 }
 .project .text-title .title {
-  font-size: var(--large-font);
+  font-size: var(--sub-title-font);
   font-weight: 800;
 }
 .project .text-body {
