@@ -135,6 +135,12 @@
   font-size: var(--title-font);
   font-weight: 800;
 }
+.project .text-title .title.title-cursor {
+  cursor: pointer;
+}
+.project .text-title .title.title-cursor:hover {
+  color: var(--inq-blue);
+}
 .project .card-list {
   display: flex;
 }
