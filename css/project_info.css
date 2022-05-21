@@ -91,35 +91,30 @@
 .project-info .text-body .project-explanation .sub-title {
   display: flex;
   color: var(--inq-blue);
+  margin-bottom: 50px;
 }
 .project-info .text-body .project-explanation .sub-title .icon {
-  font-size: 60px;
+  font-size: 50px;
   margin-right: 13px;
 }
 .project-info .text-body .project-explanation .sub-title .title {
-  font-size: var(--sub-title-font);
+  font-size: var(--large-font);
   font-weight: 700;
 }
-.project-info .text-body .project-explanation .project-state {
-
+.project-info .text-body .project-explanation .sub-body {
+  margin-left: 60px;
+  margin-right: 60px;
 }
-.project-info .text-body .project-explanation .project-state .state-text {
-
+.project-info .text-body .project-explanation .sub-body .font-style {
+  margin-bottom: 40px;
 }
-.project-info .text-body .project-explanation .project-state .state-box {
+.project-info .text-body .project-explanation .sub-body .font-style .state-text {
+  font-weight: 700;
+  margin-right: 15px;
+}
+.project-info .text-body .project-explanation .sub-body .font-style .project-state  {
   border-radius: 8px;
   background-color: var(--inq-yellow);
   /* 각 진행상황마다 색을 다르게 하고 싶음 */
-  width: 108px;
-  text-align: center;
-  padding: 7px 13px;
-}
-.project-info .text-body .project-explanation .recruit-term {
-  
-}
-.project-info .text-body .project-explanation .project-term {
-
-}
-.project-info .text-body .project-explanation .project-content {
-
+  padding: 8px 13px;
 }
