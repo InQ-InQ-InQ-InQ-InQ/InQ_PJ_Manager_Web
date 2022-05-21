@@ -1,6 +1,6 @@
 .custom-shape-divider-bottom-1652199240 {
   position: absolute;
-  bottom: 200px;
+  bottom: 143px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -125,8 +125,7 @@
 /* Project */
 .project .inner {
   color: var(--font-black);
-  width: 2000px;
-  padding-top: 100px; 
+  width: 2000px; 
 }
 .project .text-title {
   margin-bottom: 80px;
