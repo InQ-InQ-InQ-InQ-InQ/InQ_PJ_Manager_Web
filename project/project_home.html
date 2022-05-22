@@ -21,25 +21,195 @@
   <!-- CSS 파일 연결 -->
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/project_home.css">
-  <!-- 공통 header 연결 -->
-  <script type="text/javascript">
-    $(document).ready( function() {
-      $("#headers").load("../common/header_search.html");  // 원하는 파일 경로를 삽입
-    });
-  </script>
 </head>
 <body>
-  <!-- Header -->
-  <div id="headers">
-    <span>안녕하세요</span>
-  </div>
+  <form action="">
+    <!-- Header -->
+    <header>
+      <div class="header-inner">
+  
+        <div onClick="location.href='../home.html'" class="logo">
+          <img src="../images/inq_logo.png" alt="InQ" />
+        </div>
+  
+        <div class="search">
+          <span class="icon material-symbols-outlined">search</span>
+          <input placeholder="프로젝트명으로 검색하기" type="text" name="search-text" id="search-text">
+          <input type="submit" class="bton btn--reverse" value="검색">
+        </div>
+  
+        <div class="menu">
+          <a href="javascript:void(0)" class="bton login_name">인큐님 반갑습니다</a>
+        </div>
+  
+      </div>
+    </header>
+    <div class="search-radio">
+      <div class="inner">
 
-  <!-- Project Information -->
-  <section class="project-info">
+        <div class="radio-box">
+          <input type="radio" id="recruitment" name="state" value="recruitment">
+          <label for="recruitment" class="bton underline">모집중</label>
+        </div>
+  
+        <div class="radio-box">
+          <input type="radio" id="progress" name="state" value="progress">
+          <label for="progress" class="bton underline">진행중</label>
+        </div>
+  
+        <div class="radio-box">
+          <input type="radio" id="complete" name="state" value="complete">
+          <label for="complete" class="bton underline">완료</label>
+        </div>
+
+      </div>
+    </div>
+  </form>
+
+  <!-- Project Bundle-->
+  <section class="project-bundle">
     <div class="inner">
 
+      <div class="card-list">
 
+        <div class="card">
+          <img class="card-img-top" src="../images/inq_logo.png" alt="Card image cap" />
+          <div class="card-body">
+            <div class="card-text card-title">[인큐] 프로젝트 관리 매니저</div>
+            <div class="card-text">
+              <div class="card-info">
+                <div class="info-left">
+                  <div class="info-date">
+                    모집기간
+                    <span class="recruit-date">22.05.10 - 22.05.20</span>
+                  </div>
+                </div>
+                <div class="info-right">
+                  <div class="info-member">
+                    <span class="symbol material-icons">person</span>
+                    <span class="member-personnel">
+                      2
+                      /
+                      5
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top" src="../images/inq_logo.png" alt="Card image cap" />
+          <div class="card-body">
+            <div class="card-text card-title">[인큐] 프로젝트 관리 매니저</div>
+            <div class="card-text">
+              <div class="card-info">
+                <div class="info-left">
+                  <div class="info-date">
+                    모집기간
+                    <span class="recruit-date">22.05.10 - 22.05.20</span>
+                  </div>
+                </div>
+                <div class="info-right">
+                  <div class="info-member">
+                    <span class="symbol material-icons">person</span>
+                    <span class="member-personnel">
+                      2
+                      /
+                      5
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top" src="../images/inq_logo.png" alt="Card image cap" />
+          <div class="card-body">
+            <div class="card-text card-title">[인큐] 프로젝트 관리 매니저</div>
+            <div class="card-text">
+              <div class="card-info">
+                <div class="info-left">
+                  <div class="info-date">
+                    모집기간
+                    <span class="recruit-date">22.05.10 - 22.05.20</span>
+                  </div>
+                </div>
+                <div class="info-right">
+                  <div class="info-member">
+                    <span class="symbol material-icons">person</span>
+                    <span class="member-personnel">
+                      2
+                      /
+                      5
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top" src="../images/inq_logo.png" alt="Card image cap" />
+          <div class="card-body">
+            <div class="card-text card-title">[인큐] 프로젝트 관리 매니저</div>
+            <div class="card-text">
+              <div class="card-info">
+                <div class="info-left">
+                  <div class="info-date">
+                    모집기간
+                    <span class="recruit-date">22.05.10 - 22.05.20</span>
+                  </div>
+                </div>
+                <div class="info-right">
+                  <div class="info-member">
+                    <span class="symbol material-icons">person</span>
+                    <span class="member-personnel">
+                      2
+                      /
+                      5
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top" src="../images/inq_logo.png" alt="Card image cap" />
+          <div class="card-body">
+            <div class="card-text card-title">[인큐] 프로젝트 관리 매니저</div>
+            <div class="card-text">
+              <div class="card-info">
+                <div class="info-left">
+                  <div class="info-date">
+                    모집기간
+                    <span class="recruit-date">22.05.10 - 22.05.20</span>
+                  </div>
+                </div>
+                <div class="info-right">
+                  <div class="info-member">
+                    <span class="symbol material-icons">person</span>
+                    <span class="member-personnel">
+                      2
+                      /
+                      5
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
+
 </body>
 </html>
