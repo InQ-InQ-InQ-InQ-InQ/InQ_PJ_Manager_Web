@@ -161,7 +161,7 @@
   border: 2px solid #333;
   border-radius: 50%;
   position: absolute;
-  top: 800px;
+  top: 600px;
   z-index: 1;
   cursor: pointer;
   display: flex;
