@@ -2,20 +2,29 @@ package team.projectmanager.web.project;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.SessionAttribute;
+import org.springframework.web.bind.annotation.*;
 import team.projectmanager.LoginConst;
+import team.projectmanager.domain.position.Position;
+import team.projectmanager.domain.project.Project;
 import team.projectmanager.domain.project.projectservice.ProjectService;
+import team.projectmanager.domain.skill.Skills;
+
+import java.util.Arrays;
+import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
 public class ProjectController {
 
     private final ProjectService ps;
+
+    @ModelAttribute("positionList")
+    public List<Position> positionList() {
+        return Arrays.asList(Position.values());
+    }
 
     @GetMapping("/projects/new")
     public String projectForm(@ModelAttribute("projectForm") ProjectForm projectForm) {
@@ -35,5 +44,15 @@ public class ProjectController {
                 projectForm.getEndDate(), projectForm.getIntroduction(), projectForm.getPositions());
 
         return "redirect:/";
+    }
+
+    @GetMapping("/projects/{projectId}")
+    public String projectInfo(@PathVariable Long projectId, Model model) {
+
+        Project project = ps.findProjectById(projectId);
+
+        model.addAttribute("project", project);
+
+        return "/project/project_info";
     }
 }

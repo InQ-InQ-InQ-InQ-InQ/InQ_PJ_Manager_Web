@@ -16,6 +16,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class ProjectServiceImp implements ProjectService {
 
     private final ProjectRepository pr;
@@ -31,5 +32,9 @@ public class ProjectServiceImp implements ProjectService {
         Member member = ms.findById(memberId);
         MemberProject memberProject = MemberProject.createMemberProject(member, project);
         mpr.save(memberProject);
+    }
+
+    public Project findProjectById(Long projectId) {
+        return pr.findById(projectId);
     }
 }

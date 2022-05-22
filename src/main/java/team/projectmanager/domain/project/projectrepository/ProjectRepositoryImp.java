@@ -22,7 +22,16 @@ public class ProjectRepositoryImp implements ProjectRepository{
 
     @Override
     public Project findById(Long id) {
-        return em.find(Project.class, id);
+        String query = "select p from Project p " +
+                "left join fetch p.memberProjects " +
+                "left join fetch p.positions " +
+                "where p.id = :id";
+        List<Project> resultList = em.createQuery(query, Project.class)
+                .setParameter("id", id)
+                .getResultList();
+
+        if (resultList.isEmpty()) return null;
+        return resultList.get(0);
     }
 
     @Override

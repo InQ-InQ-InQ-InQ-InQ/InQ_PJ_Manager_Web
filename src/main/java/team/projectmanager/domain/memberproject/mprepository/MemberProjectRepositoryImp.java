@@ -40,7 +40,7 @@ public class MemberProjectRepositoryImp implements MemberProjectRepository{
         List<MemberProject> resultList = em.createQuery(query, MemberProject.class)
                 .setParameter("memberId", memberId)
                 .setParameter("status", status)
-                .setMaxResults(0)
+                .setMaxResults(1)
                 .getResultList();
         if (resultList.isEmpty()) return null;
         else return resultList.get(0);
