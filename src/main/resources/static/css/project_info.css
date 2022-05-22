@@ -1,0 +1,141 @@
+/* Project Information */
+.project-info {
+  margin-top: 300px;
+}
+.project-info .inner {
+  width: 2000px;
+}
+.project-info .text-title {
+  font-size: var(--title-font);
+  font-weight: 700;
+  text-align: center;
+  background-color: var(--inq-blue);
+  padding: 80px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 10px;
+}
+.project-info .text-title .title {
+  color: var(--inq-white);
+}
+.project-info .text-body {
+  display: flex;
+  margin-top: 50px;
+}
+.project-info .text-body .box {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 10px;
+
+}
+.project-info .text-body .row {
+  padding: 50px;
+  margin: 0 50px 40px 0;
+}
+.project-info .text-body .body-left {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.project-info .text-body .body-left .recruit-box {
+  background-color: var(--inq-white);
+  display: flex;
+  flex-direction: column;
+}
+.project-info .text-body .body-left .recruit-box .title {
+  position: relative;
+  color: var(--inq-blue);
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.project-info .text-body .body-left .recruit-box .title .icon {
+  position: absolute;
+  font-size: var(--sub-title-font);
+
+}
+.project-info .text-body .body-left .recruit-box .title .text {
+  font-size: var(--large-font);
+  margin-left: 70px;
+  font-weight: 700;
+}
+.project-info .text-body .body-left .recruit-box .content {
+  display: flex;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.project-info .text-body .body-left .recruit-box .content .role-body {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 20px 20px 15px;
+}
+.project-info .text-body .body-left .recruit-box .content .role-body .icon {
+  margin: 0 auto;
+  margin-bottom: 15px;
+  font-size: 50px;
+}
+.project-info .text-body .body-left .recruit-box .content .role-body .role {
+  background-color: var(--inq-yellow);
+  border-radius: 8px;
+  padding: 7px 10px;
+  font-size: 26px;
+}
+.project-info .text-body .body-left .bton {
+  width: auto;
+  font-size: var(--large-font);
+  font-weight: 700;
+}
+.project-info .text-body .body-right {
+  width: 70%;
+  padding: 50px;
+  background-color: var(--inq-white);
+}
+.project-info .text-body .body-right .sub-title {
+  display: flex;
+  color: var(--inq-blue);
+  margin-bottom: 50px;
+}
+.project-info .text-body .body-right .sub-title .icon {
+  font-size: 50px;
+  margin-right: 13px;
+}
+.project-info .text-body .body-right .sub-title .title {
+  font-size: var(--large-font);
+  font-weight: 700;
+}
+.project-info .text-body .body-right .sub-body {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+.project-info .text-body .body-right .sub-body .font-style {
+  margin-bottom: 40px;
+}
+.project-info .text-body .body-right .sub-body .font-style .state-text {
+  font-weight: 700;
+  margin-right: 15px;
+}
+.project-info .text-body .body-right .sub-body .font-style .project-state  {
+  border-radius: 8px;
+  background-color: var(--inq-yellow);
+  /* 각 진행상황마다 색을 다르게 하고 싶음 */
+  padding: 8px 13px;
+}
+
+/* Modal */
+.modal-dialog.modal-dialog-centered .modal-content .modal-header h5 {
+  padding: 12px;
+  font-weight: 700;
+  font-size: var(--large-font);
+}
+.modal-dialog.modal-dialog-centered .modal-content .modal-header button span {
+  font-size: 45px;
+}
+.modal-dialog.modal-dialog-centered .modal-content .modal-body .radio-box input {
+  width: 40px;
+  height: 40px;
+  margin: 30px 10px 25px 30px;
+}
+.modal-dialog.modal-dialog-centered .modal-content .modal-body .radio-box label {
+  font-size: 35px;
+}
+.modal-dialog.modal-dialog-centered .modal-footer .bton {
+  font-size: 35px;
+}

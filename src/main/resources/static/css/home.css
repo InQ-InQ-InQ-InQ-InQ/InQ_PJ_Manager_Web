@@ -125,8 +125,7 @@
 /* Project */
 .project .inner {
   color: var(--font-black);
-  width: 2000px;
-  padding-top: 100px; 
+  width: 2000px; 
 }
 .project .text-title {
   margin-bottom: 80px;
@@ -134,6 +133,13 @@
 .project .text-title .title {
   font-size: var(--title-font);
   font-weight: 800;
+}
+.project .text-title .title.title-cursor {
+  cursor: pointer;
+}
+.project .text-title .title.title-cursor:hover {
+  color: var(--inq-blue);
+  transition: .7s;
 }
 .project .card-list {
   display: flex;
@@ -156,7 +162,7 @@
   border: 2px solid #333;
   border-radius: 50%;
   position: absolute;
-  top: 800px;
+  top: 600px;
   z-index: 1;
   cursor: pointer;
   display: flex;

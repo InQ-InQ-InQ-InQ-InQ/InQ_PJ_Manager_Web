@@ -27,6 +27,9 @@
     $(document).ready( function() {
       $("#headers").load("/common/header_non.html");  // 원하는 파일 경로를 삽입
     });
+    $(document).ready( function() {
+      $("#footers").load("../common/footer.html");  // 원하는 파일 경로를 삽입
+    });
   </script>
   <style>
     .field-error {
@@ -109,7 +112,7 @@
                   </div>
 
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-primary bton btn--reverse">완료</button>
+                    <button type="button" class="btn btn-primary bton btn--reverse" data-dismiss="modal">완료</button>
                   </div>
                 </div>
               </div>
@@ -130,8 +133,9 @@
           </div>
         </div>
       </form>
-
     </div>
   </section>
 </body>
+<!-- Footer -->
+<div id="footers"></div>
 </html>

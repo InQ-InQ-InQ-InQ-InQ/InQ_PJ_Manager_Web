@@ -2,8 +2,8 @@
 :root {
   --inq-blue: #0088BD;
   --inq-yellow: #FFD303;
-  --inq-white: #EFF0F0;
-  --font-black: #000000;
+  --inq-white: #f4fbff;
+  --font-black: #1f1e1e;
   --title-font: 80px;
   --sub-title-font: 50px;
   --large-font: 40px;
@@ -114,6 +114,23 @@ header .menu .login_name {
   right: 30px;
   bottom: 30px;
 }
+
+/* Footer */
+footer {
+  background-color: var(--inq-blue);
+  margin-top: 200px;
+  color: var(--inq-yellow);
+}
+footer .inner {
+  width: 680px;
+  padding: 80px
+}
+footer .info .github-logo img {
+  width: 80px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  color: var(--inq-yellow);
+}
 /* Card */
 .card {
   width: 600px;
@@ -141,4 +158,15 @@ header .menu .login_name {
 .card .card-body .card-text .card-info .info-right .info-member .member-personnel {
   margin-top: 7px;
   margin-left: 15px;
+}
+/* Underline */
+.underline {
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+}
+.underline.line {
+  background-image: linear-gradient(transparent 60%, var(--inq-yellow) 40%);
+}
+.underline:hover {
+  background-size: 100% 100%;
 }
