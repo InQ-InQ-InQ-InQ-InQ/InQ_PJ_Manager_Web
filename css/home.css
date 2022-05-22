@@ -139,6 +139,7 @@
 }
 .project .text-title .title.title-cursor:hover {
   color: var(--inq-blue);
+  transition: .7s;
 }
 .project .card-list {
   display: flex;

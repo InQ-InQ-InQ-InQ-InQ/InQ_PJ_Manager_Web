@@ -21,6 +21,11 @@
   <!-- CSS 파일 연결 -->
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/project_home.css">
+  <script type="text/javascript">
+    $(document).ready( function() {
+      $("#footers").load("../common/footer.html");  // 원하는 파일 경로를 삽입
+    });
+  </script>
 </head>
 <body>
   <form action="">
@@ -49,17 +54,17 @@
 
         <div class="radio-box">
           <input type="radio" id="recruitment" name="state" value="recruitment">
-          <label for="recruitment" class="bton underline">모집중</label>
+          <label for="recruitment" class="bton underline line">모집중</label>
         </div>
   
         <div class="radio-box">
           <input type="radio" id="progress" name="state" value="progress">
-          <label for="progress" class="bton underline">진행중</label>
+          <label for="progress" class="bton underline line">진행중</label>
         </div>
   
         <div class="radio-box">
           <input type="radio" id="complete" name="state" value="complete">
-          <label for="complete" class="bton underline">완료</label>
+          <label for="complete" class="bton underline line">완료</label>
         </div>
 
       </div>
@@ -210,6 +215,9 @@
       </div>
     </div>
   </section>
+
+  <!-- Footer -->
+  <div id="footers"></div>
 
 </body>
 </html>

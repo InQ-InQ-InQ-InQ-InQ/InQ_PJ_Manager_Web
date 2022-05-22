@@ -159,3 +159,14 @@ footer .info .github-logo img {
   margin-top: 7px;
   margin-left: 15px;
 }
+/* Underline */
+.underline {
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+}
+.underline.line {
+  background-image: linear-gradient(transparent 60%, var(--inq-yellow) 40%);
+}
+.underline:hover {
+  background-size: 100% 100%;
+}
