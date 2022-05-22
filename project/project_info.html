@@ -84,40 +84,42 @@
           </button>
 
           <!-- Modal -->
-          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLongTitle">프로젝트 상태</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-
-                  <div class="radio-box">
-                    <input type="radio" id="recruitment" name="state" value="recruitment">
-                    <label for="recruitment">모집중</label>
+          <form action="">
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">프로젝트 상태</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
                   </div>
-
-                  <div class="radio-box">
-                    <input type="radio" id="progress" name="state" value="progress">
-                    <label for="progress">진행중</label>
+                  <div class="modal-body">
+  
+                    <div class="radio-box">
+                      <input type="radio" id="recruitment" name="state" value="recruitment">
+                      <label for="recruitment">모집중</label>
+                    </div>
+  
+                    <div class="radio-box">
+                      <input type="radio" id="progress" name="state" value="progress">
+                      <label for="progress">진행중</label>
+                    </div>
+  
+                    <div class="radio-box">
+                      <input type="radio" id="complete" name="state" value="complete">
+                      <label for="complete">완료</label>
+                    </div>
+  
                   </div>
-
-                  <div class="radio-box">
-                    <input type="radio" id="complete" name="state" value="complete">
-                    <label for="complete">완료</label>
+                  <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-primary bton btn--reverse" >완료</button> -->
+                    <input type="submit" value="완료" class="btn btn-primary bton btn--reverse">
                   </div>
-
-                </div>
-                <div class="modal-footer">
-                  <!-- <button type="button" class="btn btn-primary bton btn--reverse" >완료</button> -->
-                  <input type="submit" value="완료" class="btn btn-primary bton btn--reverse">
                 </div>
               </div>
             </div>
-          </div>
+          </form>
 
         </div>
         <!-- Body Right -->
