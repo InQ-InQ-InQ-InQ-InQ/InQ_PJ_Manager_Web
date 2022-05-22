@@ -49,7 +49,7 @@ public class MemberController {
 
         //아이디 중복 검증
         if (checkDuplicatedLoginId(memberForm)) {
-            bindingResult.rejectValue("loginId", "DuplicatedLoginId", "존재하는 아이디 입니다.");
+            bindingResult.rejectValue("loginId", "DuplicatedLoginId", "이미 존재하는 아이디 입니다.");
             return "member/signup";
         }
         //비밀번호 확인 검즘

@@ -4,6 +4,8 @@ import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 import team.projectmanager.domain.position.Position;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.util.List;
 
