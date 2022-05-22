@@ -115,6 +115,22 @@ header .menu .login_name {
   bottom: 30px;
 }
 
+/* Footer */
+footer {
+  background-color: var(--inq-blue);
+  margin-top: 200px;
+  color: var(--inq-yellow);
+}
+footer .inner {
+  width: 680px;
+  padding: 80px
+}
+footer .info .github-logo img {
+  width: 80px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  color: var(--inq-yellow);
+}
 /* Card */
 .card {
   width: 600px;

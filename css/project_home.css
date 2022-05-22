@@ -41,9 +41,6 @@ header .search input.bton {
   width: 2500px;
   display: flex;
 }
-.search-radio .radio-box {
-
-}
 .search-radio .radio-box input[type=radio] {
   width: 0;
   height: 0;
