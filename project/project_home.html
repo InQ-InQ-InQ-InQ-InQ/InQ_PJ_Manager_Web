@@ -25,30 +25,34 @@
   <script defer src="../js/project_home.js"></script>
   <script type="text/javascript">
     $(document).ready( function() {
+      $("#headers").load("../common/header.html");  // 원하는 파일 경로를 삽입
+    });
+    $(document).ready( function() {
       $("#footers").load("../common/footer.html");  // 원하는 파일 경로를 삽입
     });
   </script>
 </head>
 <body>
   <!-- Header -->
-  <header>
+  <div id="headers"></div>
+  <!-- <header>
     <div class="header-inner">
       
       <div onClick="location.href='../home.html'" class="logo">
         <img src="../images/inq_logo.png" alt="InQ" />
       </div>
       
-      <!-- <div class="search">
+      <div class="search">
         <span class="icon material-symbols-outlined">search</span>
         <input placeholder="프로젝트명으로 검색하기" type="text" name="search-text" id="search-text">
         <input type="submit" class="bton btn--reverse" value="검색">
-      </div> -->
+      </div>
       
       <div class="menu">
         <a href="javascript:void(0)" class="bton login_name">인큐님 반갑습니다</a>
       </div>
     </div>
-  </header>
+  </header> -->
   <!-- Searh Bar -->
   <section class="search-bar">
     <form action="">

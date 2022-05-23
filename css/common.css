@@ -105,6 +105,7 @@ header .logo {
   bottom: 0;
   left: 30px;
   margin: auto;
+  cursor: pointer;
 }
 header .logo img {
   height: 200px;
