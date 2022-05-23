@@ -78,6 +78,10 @@
   padding: 7px 10px;
   font-size: 26px;
 }
+.project-info .text-body .body-left .recruit-box .content .role-body .role.recruit-role {
+  background-color: var(--inq-blue);
+  color: var(--inq-white);
+}
 .project-info .text-body .body-left .bton {
   width: auto;
   font-size: var(--large-font);
