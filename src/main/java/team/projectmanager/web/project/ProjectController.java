@@ -14,6 +14,7 @@ import team.projectmanager.domain.memberproject.MemberProject;
 import team.projectmanager.domain.position.Position;
 import team.projectmanager.domain.project.Project;
 import team.projectmanager.domain.project.ProjectStatus;
+import team.projectmanager.domain.project.projectrepository.ProjectSearch;
 import team.projectmanager.domain.project.projectservice.ProjectService;
 
 import java.util.Arrays;
@@ -85,7 +86,19 @@ public class ProjectController {
         return "redirect:/projects/" + projectId;
     }
 
+    @GetMapping("/projects")
+    public String projectList(@ModelAttribute("search") ProjectSearch search,
+                              Model model) {
+
+        List<Project> projects = ps.findBySearch(search);
+
+        model.addAttribute("projects", projects);
+
+        return "/project/project_home";
+    }
+
     private boolean getIsJoin(Long memberId, Project project) {
+
         for (MemberProject memberProject : project.getMemberProjects()) {
             if (memberProject.getMember().getId().equals(memberId)) {
                 return true;

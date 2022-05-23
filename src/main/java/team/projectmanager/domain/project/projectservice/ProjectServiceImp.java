@@ -11,6 +11,7 @@ import team.projectmanager.domain.position.Position;
 import team.projectmanager.domain.project.Project;
 import team.projectmanager.domain.project.ProjectStatus;
 import team.projectmanager.domain.project.projectrepository.ProjectRepository;
+import team.projectmanager.domain.project.projectrepository.ProjectSearch;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -45,5 +46,13 @@ public class ProjectServiceImp implements ProjectService {
     public void editProjectStatus(Long projectId, ProjectStatus status) {
         Project project = pr.findByIdLazy(projectId);
         project.setStatus(status);
+    }
+
+    public List<Project> findByStatus(ProjectStatus status) {
+        return pr.findByStatus(status);
+    }
+
+    public List<Project> findBySearch(ProjectSearch search) {
+        return pr.findBySearch(search);
     }
 }

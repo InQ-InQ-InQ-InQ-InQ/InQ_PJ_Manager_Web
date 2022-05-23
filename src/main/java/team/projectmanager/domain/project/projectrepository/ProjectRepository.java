@@ -18,4 +18,8 @@ public interface ProjectRepository {
     List<Project> findAll();
 
     Project findByIdLazy(Long id);
+
+    List<Project> findByStatus(ProjectStatus status);
+
+    List<Project> findBySearch(ProjectSearch search);
 }

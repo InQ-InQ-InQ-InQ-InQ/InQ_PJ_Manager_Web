@@ -3,6 +3,7 @@ package team.projectmanager.domain.project.projectrepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 import team.projectmanager.domain.project.Project;
+import team.projectmanager.domain.project.ProjectStatus;
 
 import javax.persistence.EntityManager;
 import java.util.List;
@@ -54,5 +55,48 @@ public class ProjectRepositoryImp implements ProjectRepository{
     @Override
     public Project findByIdLazy(Long id) {
         return em.find(Project.class, id);
+    }
+
+    @Override
+    public List<Project> findByStatus(ProjectStatus status) {
+        String query = "select distinct p from Project p " +
+                "join fetch p.memberProjects " +
+                "where p.status = :status";
+        return em.createQuery(query, Project.class)
+                .setParameter("status", status)
+                .getResultList();
+    }
+
+    @Override
+    public List<Project> findBySearch(ProjectSearch search) {
+        if ((search.getName() == null && search.getStatus() == null) || (search.getName().isEmpty() && search.getStatus() == null)) {
+            String query = "select p from Project p " +
+                    "join fetch p.memberProjects";
+            return em.createQuery(query, Project.class)
+                    .getResultList();
+        } else if (search.getName().isEmpty()) {
+            String query = "select p from Project p " +
+                    "join fetch p.memberProjects " +
+                    "where p.status = :status";
+            return em.createQuery(query, Project.class)
+                    .setParameter("status", search.getStatus())
+                    .getResultList();
+        } else if (search.getStatus() == null) {
+            String query = "select p from Project p " +
+                    "join fetch p.memberProjects " +
+                    "where p.name = :name";
+            return em.createQuery(query, Project.class)
+                    .setParameter("name", search.getName())
+                    .getResultList();
+        } else {
+            String query = "select p from Project p " +
+                    "join fetch p.memberProjects " +
+                    "where p.name = :name " +
+                    "and p.status = :status";
+            return em.createQuery(query, Project.class)
+                    .setParameter("name", search.getName())
+                    .setParameter("status", search.getStatus())
+                    .getResultList();
+        }
     }
 }
