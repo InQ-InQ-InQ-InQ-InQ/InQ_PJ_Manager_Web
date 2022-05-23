@@ -19,10 +19,10 @@
   <!-- Material icons -->
   <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp|Material+Symbols+Outlined" rel="stylesheet">
   <!-- CSS 파일 연결 -->
-  <link rel="stylesheet" href="../css/common.css">
-  <link rel="stylesheet" href="../css/project_home.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/project_home.css">
   <!-- JS 파일 연결 -->
-  <script defer src="../js/project_home.js"></script>
+  <script defer src="/js/project_home.js"></script>
   <script type="text/javascript">
     $(document).ready( function() {
       $("#footers").load("../common/footer.html");  // 원하는 파일 경로를 삽입
@@ -88,7 +88,7 @@
         <div class="card">
           <img class="card-img-top" src="../images/inq_logo.png" alt="Card image cap" />
           <div class="card-body">
-            <div class="card-text card-title" th:text="${project.name}">[인큐] 프로젝트 관리 매니저</div>
+            <a th:href="@{/projects/{projectId}(projectId = ${project.id})}"><div class="card-text card-title" th:text="${project.name}">[인큐] 프로젝트 관리 매니저</div></a>
             <div class="card-text">
               <div class="card-info">
                 <div class="info-left">
