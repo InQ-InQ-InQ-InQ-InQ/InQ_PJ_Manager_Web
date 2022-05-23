@@ -22,9 +22,9 @@ public class ProjectRepositoryImp implements ProjectRepository{
 
     @Override
     public Project findById(Long id) {
-        String query = "select p from Project p " +
-                "left join fetch p.memberProjects " +
-                "left join fetch p.positions " +
+        String query = "select distinct p from Project p " +
+                "left join fetch p.memberProjects mp " +
+                "join fetch mp.member " +
                 "where p.id = :id";
         List<Project> resultList = em.createQuery(query, Project.class)
                 .setParameter("id", id)
@@ -49,5 +49,10 @@ public class ProjectRepositoryImp implements ProjectRepository{
         String query = "select p from Project p";
         return em.createQuery(query, Project.class)
                 .getResultList();
+    }
+
+    @Override
+    public Project findByIdLazy(Long id) {
+        return em.find(Project.class, id);
     }
 }

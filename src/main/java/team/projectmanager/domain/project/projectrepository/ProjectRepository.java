@@ -16,4 +16,6 @@ public interface ProjectRepository {
     Project findByName(String name);
 
     List<Project> findAll();
+
+    Project findByIdLazy(Long id);
 }

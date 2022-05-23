@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,7 +38,7 @@
   <div id="headers"></div>
 
   <!-- Project Information -->
-  <section class="project-info">
+  <section class="project-info" th:object="${project}">
     <div class="inner">
 
       <div class="text-title">
@@ -47,47 +47,47 @@
 
       <div class="text-body">
         <!-- Body Left -->
-        <form action=""></form>
         <div class="body-left">
             
           <div class="recruit-box row box">
             <div class="title">
-              <span class="icon material-symbols-outlined">group</span>
+              <span class="icon material-symbols-outlined">group_add</span>
               <span class="text">모집중인 역할</span>
             </div>
-            <div class="content">
+            <div class="content" th:each="position : *{positions}">
               <div class="role-body">
                 <span class="icon material-symbols-outlined">account_circle_full</span>
-                <span class="role">frontend</span>
+                <span th:text="${position.name()}" class="role">frontend</span>
               </div>
+            </div>
+          </div>
+
+          <div class="recruit-box row box">
+            <div class="title">
+              <span class="icon material-symbols-outlined">group</span>
+              <span class="text">참여중인 멤버</span>
+            </div>
+            <div class="content" th:each="memberProject : *{memberProjects}">
               <div class="role-body">
                 <span class="icon material-symbols-outlined">account_circle_full</span>
-                <span class="role">frontend</span>
-              </div>
-              <div class="role-body">
-                <span class="icon material-symbols-outlined">account_circle_full</span>
-                <span class="role">backend</span>
-              </div>
-              <div class="role-body">
-                <span class="icon material-symbols-outlined">account_circle_full</span>
-                <span class="role">backend</span>
-              </div>
-              <div class="role-body">
-                <span class="icon material-symbols-outlined">account_circle_full</span>
-                <span class="role">backend</span>
+                <span th:text="${memberProject.member.name}" class="role">김인큐</span>
+                <span th:text="${memberProject.member.position}" class="role">포지션</span>
               </div>
             </div>
           </div>
         
           <!-- <button class="bton btn--reverse row box">참여하기</button> -->
-          <input type="submit" value="참여하기" class="bton btn--reverse row box">
+          <form th:action="@{/memberproject/join}" method="post">
+            <input type="hidden" th:value="${projectId}" th:name="projectId">
+            <input th:if="${!isJoin}" type="submit" value="참여하기" class="bton btn--reverse row box">
+          </form>
             <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary bton btn--blue-reverse row box" data-toggle="modal" data-target="#exampleModalCenter">
+          <button th:if="${isAdmin}" type="button" class="btn btn-primary bton btn--blue-reverse row box" data-toggle="modal" data-target="#exampleModalCenter">
             프로젝트 상태변경
           </button>
 
           <!-- Modal -->
-          <form action="">
+          <form th:action="@{/projects/edit/status}" method="post">
             <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -99,19 +99,10 @@
                   </div>
                   <div class="modal-body">
   
-                    <div class="radio-box">
-                      <input type="radio" id="recruitment" name="state" value="recruitment">
-                      <label for="recruitment">모집중</label>
-                    </div>
-  
-                    <div class="radio-box">
-                      <input type="radio" id="progress" name="state" value="progress">
-                      <label for="progress">진행중</label>
-                    </div>
-  
-                    <div class="radio-box">
-                      <input type="radio" id="complete" name="state" value="complete">
-                      <label for="complete">완료</label>
+                    <div class="radio-box" th:each="status : ${statusList}">
+                      <label th:for="${#ids.next('projectStatus')}" th:text="${status}" for="recruitment">모집중</label>
+                      <input th:value="${status}" th:name="projectStatus" th:id="projectStatus" type="radio" id="recruitment" name="state" value="recruitment">
+                      <input type="hidden" th:value="${projectId}" th:name="projectId">
                     </div>
   
                   </div>
@@ -126,7 +117,7 @@
 
         </div>
         <!-- Body Right -->
-        <div class="body-right box">
+        <div class="body-right box" th:object="${project}">
           <div class="sub-title">
             <span class="icon material-symbols-outlined">description</span>
             <div class="title">프로젝트 설명</div>
@@ -134,22 +125,22 @@
           <div class="sub-body">
             <div class="font-style">
               <span class="state-text">프로젝트 생성자</span>
-              <span class="project-constructor">김인큐</span>
+              <span th:text="${admin.name}" class="project-constructor">김인큐</span>
             </div>
             <div class="font-style">
               <span class="state-text">프로젝트 상태</span>
-              <span class="project-state">모집중</span>
+              <span th:text="*{status.name()}" class="project-state">모집중</span>
             </div>
             <div class="font-style">
               <span class="state-text">모집마감 기간</span>
-              <span class="recurit-term">~ 2022.05.30</span>
+              <span th:text="'~' + *{period}" class="recurit-term">~ 2022.05.30</span>
             </div>
             <div class="font-style">
               <span class="state-text">프로젝트 기간</span>
-              <span class="project-term">2022.06.01 ~ 2022.06.30</span>
+              <span th:text="|*{startDate} ~ *{endDate}|" class="project-term">2022.06.01 ~ 2022.06.30</span>
             </div>
             <hr style="margin: 60px 0;">
-            <div class="project-content">
+            <div th:text="*{introduction}" class="project-content">
               공자는 두기 이상은 그들의 위하여 뜨거운지라, 석가는 피다. 것은 튼튼하며, 굳세게 뼈 아니한 낙원을 긴지라 우리의 인간의 위하여서. 기관과 어디 미묘한 수 오아이스도 커다란 이상 만천하의 것이다. 인간에 그들의 두손을 스며들어 얼마나 그와 이것이다. 그들은 풍부하게 우리 고동을 보는 아니다. 봄바람을 이상, 남는 방지하는 예수는 천하를 칼이다. 사랑의 용기가 무엇을 때문이다. 보이는 긴지라 황금시대를 날카로우나 황금시대다. 노래하며 너의 피에 우리 목숨이 이 봄바람이다. 가는 피어나기 있는 반짝이는 이것이다.
 
               고행을 오아이스도 꾸며 많이 간에 얼마나 교향악이다. 보이는 착목한는 오아이스도 온갖 자신과 아니다. 시들어 오아이스도 얼마나 미묘한 것이 만천하의 있다. 이 전인 인생을 것이다. 보는 찬미를 이상의 그들을 이것은 소담스러운 얼음이 튼튼하며, 대중을 것이다. 동산에는 긴지라 오직 있을 그들은 용감하고 충분히 부패뿐이다. 따뜻한 보이는 커다란 있으며, 때에, 영락과 듣는다. 넣는 것은 같지 아름다우냐? 대중을 무한한 못할 곧 있는가?

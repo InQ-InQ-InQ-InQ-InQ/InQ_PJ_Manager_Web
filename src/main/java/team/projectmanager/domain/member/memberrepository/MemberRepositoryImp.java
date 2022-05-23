@@ -56,6 +56,11 @@ public class MemberRepositoryImp implements MemberRepository{
     }
 
     @Override
+    public Member findByIdLazy(Long id) {
+        return em.find(Member.class, id);
+    }
+
+    @Override
     public List<Member> findAll() {
         String query = "select m from Member m";
         return em.createQuery(query, Member.class)

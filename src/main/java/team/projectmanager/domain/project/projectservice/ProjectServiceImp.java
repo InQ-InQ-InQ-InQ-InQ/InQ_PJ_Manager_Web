@@ -9,6 +9,7 @@ import team.projectmanager.domain.memberproject.MemberProject;
 import team.projectmanager.domain.memberproject.mprepository.MemberProjectRepository;
 import team.projectmanager.domain.position.Position;
 import team.projectmanager.domain.project.Project;
+import team.projectmanager.domain.project.ProjectStatus;
 import team.projectmanager.domain.project.projectrepository.ProjectRepository;
 
 import java.time.LocalDate;
@@ -24,7 +25,7 @@ public class ProjectServiceImp implements ProjectService {
     private final MemberProjectRepository mpr;
 
     @Transactional
-    public void newProject(Long memberId, String name, LocalDate period, LocalDate startDate, LocalDate endDate, String introduction, List<Position> positions) {
+    public Long newProject(Long memberId, String name, LocalDate period, LocalDate startDate, LocalDate endDate, String introduction, List<Position> positions) {
 
         Project project = Project.createProject(memberId, name, period, startDate, endDate, introduction, positions);
         pr.save(project);
@@ -32,9 +33,17 @@ public class ProjectServiceImp implements ProjectService {
         Member member = ms.findById(memberId);
         MemberProject memberProject = MemberProject.createMemberProject(member, project);
         mpr.save(memberProject);
+
+        return project.getId();
     }
 
     public Project findProjectById(Long projectId) {
         return pr.findById(projectId);
+    }
+
+    @Transactional
+    public void editProjectStatus(Long projectId, ProjectStatus status) {
+        Project project = pr.findByIdLazy(projectId);
+        project.setStatus(status);
     }
 }

@@ -17,4 +17,6 @@ public interface MemberRepository {
     Member findByName(String name);
 
     List<Member> findAll();
+
+    Member findByIdLazy(Long id);
 }
