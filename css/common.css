@@ -110,6 +110,7 @@ header .logo img {
   height: 200px;
 }
 header .menu .login_name {
+  width: auto;
   position: absolute;
   right: 30px;
   bottom: 30px;
