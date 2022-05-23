@@ -1,38 +1,4 @@
-/* Header - Search */
-header .search {
-  position: absolute;
-  top: 70px;
-  left: 300px;
-  margin: auto;
-}
-header .search .icon {
-  position: absolute;
-  font-size: 70px;
-  color: var(--inq-yellow);
-}
-header .search #search-text {
-  width: 600px;
-  margin-left: 80px ;
-  margin-top: 10px;
-  background-color: transparent;
-  border: none;
-}
-header .search #search-text:focus {
-  /* input 클릭시, 테두리 없애기 */
-  outline: none;
-  color: var(--inq-yellow)
-}
-header .search #search-text::placeholder {
-  color: var(--inq-yellow);
-  opacity: .6;
-}
-header .search input.bton {
-  position: absolute;
-  width: 100px;
-  margin-left: 430px;
-  top: 0;
-}
-/* Header - Radio */
+/* Search - Radio */
 .search-radio {
   margin-top: 200px;
 
@@ -55,7 +21,40 @@ header .search input.bton {
 .search-radio .radio-box input[type=radio] + label:hover{
   background-color: transparent;
 } 
-
+/* Search - text*/
+.search-radio .search {
+  position: absolute;
+  top: 55px;
+  left: 780px;
+  margin: auto;
+}
+.search-radio .search .icon {
+  position: absolute;
+  font-size: 70px;
+  color: var(--inq-yellow);
+}
+.search-radio .search #search-text {
+  width: 600px;
+  margin-left: 80px ;
+  margin-top: 10px;
+  background-color: transparent;
+  border: none;
+}
+.search-radio .search #search-text:focus {
+  /* input 클릭시, 테두리 없애기 */
+  outline: none;
+  color: var(--inq-blue)
+}
+.search-radio .search #search-text::placeholder {
+  color: var(--inq-blue);
+  opacity: .6;
+}
+.search-radio .search input.bton {
+  position: absolute;
+  width: 100px;
+  margin-left: 430px;
+  top: 0;
+}
 /* Project Bundle */
 .project-bundle {
   margin-top: 60px;
