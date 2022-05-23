@@ -118,13 +118,13 @@
   margin: 3px 12px 0 2px;
 }
 .member-info .text-body .row .member-project .project-content .project-progress.recruit {
-  background-color:#FC8B79;
+  background-color:var(--recruit-color);
 }
 .member-info .text-body .row .member-project .project-content .project-progress.execution {
-  background-color: var(--inq-yellow);
+  background-color: var(--execution-color);
 }
 .member-info .text-body .row .member-project .project-content .project-progress.complete {
-  background-color: #A1ED85;
+  background-color: var(--complete-color);
 }
 .member-info .text-body .row .member-project .project-addinfo {
   color: #807e7e;
