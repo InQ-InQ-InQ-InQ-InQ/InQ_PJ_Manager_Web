@@ -149,6 +149,9 @@ footer .info .github-logo img {
 .card .card-body .card-text .card-info .info-left {
   margin:20px 0 20px 0;
 }
+.card .card-body .card-text .card-info .info-right {
+  display: flex;
+}
 .card .card-body .card-text .card-info .info-right .info-member {
   display: flex;
 }
@@ -159,6 +162,24 @@ footer .info .github-logo img {
 .card .card-body .card-text .card-info .info-right .info-member .member-personnel {
   margin-top: 7px;
   margin-left: 15px;
+}
+.card .card-body .card-text .card-info .info-right .info-progress {
+  width: auto;
+  border-radius: 8px;
+  padding: 10px;
+  margin-left: 150px;
+}
+/* 모집중 */
+.card .card-body .card-text .card-info .info-right .info-progress.recruit {
+  background-color:#FC8B79;
+}
+/* 진행중 */
+.card .card-body .card-text .card-info .info-right .info-progress.execution {
+  background-color: var(--inq-yellow);
+}
+/* 완료 */
+.card .card-body .card-text .card-info .info-right .info-progress.complete {
+  background-color: #A1ED85;
 }
 /* Underline */
 .underline {

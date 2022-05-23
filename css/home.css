@@ -65,14 +65,18 @@
   font-size: var(--sub-title-font);
   font-weight: 600;
 }
-.member-info .text-body .row .member-detail .detail-content.a-font {
-  display: inline-block;
-  margin: 12px 0;
-  color: var(--inq-white);
-}
 .member-info .text-body .row .member-detail .detail-content {
   display: inline-block;
   margin: 12px 0;
+}
+.member-info .text-body .row .member-detail .detail-content.a-font {
+  /* display: inline-block;
+  margin: 12px 0; */
+  color: var(--inq-white);
+}
+.member-info .text-body .row .member-detail .detail-content.a-font:hover {
+  color: var(--inq-blue);
+  font-weight: 800;
 }
 .member-info .text-body .row .member-skill {
   width: 350px;
@@ -112,6 +116,15 @@
   text-align: center;
   padding: 12px;
   margin: 3px 12px 0 2px;
+}
+.member-info .text-body .row .member-project .project-content .project-progress.recruit {
+  background-color:#FC8B79;
+}
+.member-info .text-body .row .member-project .project-content .project-progress.execution {
+  background-color: var(--inq-yellow);
+}
+.member-info .text-body .row .member-project .project-content .project-progress.complete {
+  background-color: #A1ED85;
 }
 .member-info .text-body .row .member-project .project-addinfo {
   color: #807e7e;
