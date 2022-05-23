@@ -164,10 +164,12 @@ footer .info .github-logo img {
 .underline {
   background-repeat: no-repeat;
   background-size: 0% 100%;
-}
-.underline.line {
   background-image: linear-gradient(transparent 60%, var(--inq-yellow) 40%);
 }
 .underline:hover {
   background-size: 100% 100%;
+}
+.underline.click-line {
+  background-size: 100% 100%;
+  
 }
