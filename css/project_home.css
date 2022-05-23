@@ -55,6 +55,10 @@
   margin-left: 430px;
   top: 0;
 }
+
+.search-bar .posting {
+  margin-left: 2430px;
+}
 /* Project Bundle */
 .project-bundle {
   margin-top: 60px;

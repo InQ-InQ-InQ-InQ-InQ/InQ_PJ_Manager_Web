@@ -49,35 +49,39 @@
       </div>
     </div>
   </header>
+  <!-- Searh Bar -->
+  <section class="search-bar">
+    <form action="">
+      <div class="search-radio">
+        <div class="inner">
   
-  <form action="">
-    <div class="search-radio">
-      <div class="inner">
-
-        <div class="radio-box">
-          <input type="radio" id="recruitment" name="state" value="recruitment">
-          <label for="recruitment" class="bton underline">모집중</label>
-        </div>
+          <div class="radio-box">
+            <input type="radio" id="recruitment" name="state" value="recruitment">
+            <label for="recruitment" class="bton underline">모집중</label>
+          </div>
+    
+          <div class="radio-box">
+            <input type="radio" id="progress" name="state" value="progress">
+            <label for="progress" class="bton underline">진행중</label>
+          </div>
+    
+          <div class="radio-box">
+            <input type="radio" id="complete" name="state" value="complete">
+            <label for="complete" class="bton underline">완료</label>
+          </div>
   
-        <div class="radio-box">
-          <input type="radio" id="progress" name="state" value="progress">
-          <label for="progress" class="bton underline">진행중</label>
+          <div class="search">
+            <span class="icon material-symbols-outlined">search</span>
+            <input placeholder="프로젝트명으로 검색하기" type="text" name="search-text" id="search-text">
+            <input type="submit" class="bton btn--reverse" value="검색">
+          </div>
+          
         </div>
-  
-        <div class="radio-box">
-          <input type="radio" id="complete" name="state" value="complete">
-          <label for="complete" class="bton underline">완료</label>
-        </div>
-
-        <div class="search">
-          <span class="icon material-symbols-outlined">search</span>
-          <input placeholder="프로젝트명으로 검색하기" type="text" name="search-text" id="search-text">
-          <input type="submit" class="bton btn--reverse" value="검색">
-        </div>
-
       </div>
-    </div>
-  </form>
+    </form>
+    
+    <a href="#" class="bton btn--reverse posting" onclick="location.href='./project_posting.html'">프로젝트 등록</a>
+  </section>
 
   <!-- Project Bundle-->
   <section class="project-bundle">
