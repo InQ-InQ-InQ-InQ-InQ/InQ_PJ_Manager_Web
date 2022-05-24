@@ -139,17 +139,21 @@
                         5
                       </span>
                     </div>
+                    <div th:if="${project.status == T(team.projectmanager.domain.project.ProjectStatus).ING}" class="info-progress execution">진행중</div>
+                    <div th:if="${project.status == T(team.projectmanager.domain.project.ProjectStatus).COLLECT}" class="info-progress recruit">모집중</div>
+                    <div th:if="${project.status == T(team.projectmanager.domain.project.ProjectStatus).FIN}" class="info-progress complete">완료</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-      <div class="swiper-prev">
-        <div class="material-icons">arrow_back</div>
-      </div>
-      <div class="swiper-next">
-        <div class="material-icons">arrow_forward</div>
+          <div class="swiper-prev">
+            <div class="material-icons">arrow_back</div>
+          </div>
+          <div class="swiper-next">
+            <div class="material-icons">arrow_forward</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>

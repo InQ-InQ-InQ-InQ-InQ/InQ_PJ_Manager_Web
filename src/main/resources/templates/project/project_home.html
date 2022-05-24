@@ -59,7 +59,7 @@
 
           <div class="search">
             <span class="icon material-symbols-outlined">search</span>
-            <input th:field="*{name}" placeholder="프로젝트명으로 검색하기" type="text" name="search-text" id="search-text">
+            <input th:field="*{name}" placeholder="프로젝트명으로 검색" type="text" name="search-text" id="search-text">
             <input type="submit" class="bton btn--reverse" value="검색">
           </div>
 
@@ -95,6 +95,9 @@
                       5
                     </span>
                   </div>
+                  <div th:if="${project.status == T(team.projectmanager.domain.project.ProjectStatus).ING}" class="info-progress execution">진행중</div>
+                  <div th:if="${project.status == T(team.projectmanager.domain.project.ProjectStatus).COLLECT}" class="info-progress recruit">모집중</div>
+                  <div th:if="${project.status == T(team.projectmanager.domain.project.ProjectStatus).FIN}" class="info-progress complete">완료</div>
                 </div>
               </div>
             </div>
