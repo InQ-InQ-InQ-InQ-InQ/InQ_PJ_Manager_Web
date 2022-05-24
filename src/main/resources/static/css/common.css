@@ -4,6 +4,9 @@
   --inq-yellow: #FFD303;
   --inq-white: #f4fbff;
   --font-black: #1f1e1e;
+  --recruit-color: #FC8B79;
+  --execution-color:#FFD303;
+  --complete-color: #A1ED85;
   --title-font: 80px;
   --sub-title-font: 50px;
   --large-font: 40px;
@@ -105,6 +108,7 @@ header .logo {
   bottom: 0;
   left: 30px;
   margin: auto;
+  cursor: pointer;
 }
 header .logo img {
   height: 200px;
@@ -171,7 +175,7 @@ footer .info .github-logo img {
 }
 /* 모집중 */
 .card .card-body .card-text .card-info .info-right .info-progress.recruit {
-  background-color:#FC8B79;
+  background-color: var(--recruit-color);
 }
 /* 진행중 */
 .card .card-body .card-text .card-info .info-right .info-progress.execution {
@@ -179,7 +183,7 @@ footer .info .github-logo img {
 }
 /* 완료 */
 .card .card-body .card-text .card-info .info-right .info-progress.complete {
-  background-color: #A1ED85;
+  background-color: var(--complete-color);
 }
 /* Underline */
 .underline {

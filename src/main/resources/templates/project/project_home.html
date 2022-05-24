@@ -25,6 +25,9 @@
   <script defer src="/js/project_home.js"></script>
   <script type="text/javascript">
     $(document).ready( function() {
+      $("#headers").load("../common/header.html");  // 원하는 파일 경로를 삽입
+    });
+    $(document).ready( function() {
       $("#footers").load("../common/footer.html");  // 원하는 파일 경로를 삽입
     });
   </script>
@@ -32,53 +35,39 @@
 <body>
   <!-- Header -->
   <header>
-    <div class="header-inner">
-      
-      <div onClick="location.href='../home.html'" class="logo">
-        <img src="../images/inq_logo.png" alt="InQ" />
-      </div>
-      
-      <!-- <div class="search">
-        <span class="icon material-symbols-outlined">search</span>
-        <input placeholder="프로젝트명으로 검색하기" type="text" name="search-text" id="search-text">
-        <input type="submit" class="bton btn--reverse" value="검색">
-      </div> -->
-      
-      <div class="menu">
-        <a href="javascript:void(0)" class="bton login_name">인큐님 반갑습니다</a>
-      </div>
-    </div>
+    <div id="headers"></div>
   </header>
-  
-  <form th:action method="get" th:object="${search}">
-    <div class="search-radio">
-      <div class="inner">
+  <section class="search-bar">
+    <form th:action method="get" th:object="${search}">
+      <div class="search-radio">
+        <div class="inner">
 
-        <div class="radio-box">
-          <input th:value="COLLECT" th:name="status" type="radio" id="recruitment" name="state" value="recruitment">
-          <label for="recruitment" class="bton underline">모집중</label>
-        </div>
-  
-        <div class="radio-box">
-          <input th:value="ING" th:name="status" type="radio" id="progress" name="state" value="progress">
-          <label for="progress" class="bton underline">진행중</label>
-        </div>
-  
-        <div class="radio-box">
-          <input th:value="FIN" th:name="status" type="radio" id="complete" name="state" value="complete">
-          <label for="complete" class="bton underline">완료</label>
-        </div>
+          <div class="radio-box">
+            <input th:value="COLLECT" th:name="status" type="radio" id="recruitment" name="state" value="recruitment">
+            <label for="recruitment" class="bton underline">모집중</label>
+          </div>
 
-        <div class="search">
-          <span class="icon material-symbols-outlined">search</span>
-          <input th:field="*{name}" placeholder="프로젝트명으로 검색하기" type="text" name="search-text" id="search-text">
-          <input type="submit" class="bton btn--reverse" value="검색">
-        </div>
+          <div class="radio-box">
+            <input th:value="ING" th:name="status" type="radio" id="progress" name="state" value="progress">
+            <label for="progress" class="bton underline">진행중</label>
+          </div>
 
+          <div class="radio-box">
+            <input th:value="FIN" th:name="status" type="radio" id="complete" name="state" value="complete">
+            <label for="complete" class="bton underline">완료</label>
+          </div>
+
+          <div class="search">
+            <span class="icon material-symbols-outlined">search</span>
+            <input th:field="*{name}" placeholder="프로젝트명으로 검색하기" type="text" name="search-text" id="search-text">
+            <input type="submit" class="bton btn--reverse" value="검색">
+          </div>
+
+        </div>
       </div>
-    </div>
-  </form>
-
+    </form>
+    <a th:href="@{/projects/new}" href="#" class="bton btn--reverse posting" onclick="location.href='./project_posting.html'">프로젝트 등록</a>
+  </section>
   <!-- Project Bundle-->
   <section class="project-bundle">
     <div class="inner">
